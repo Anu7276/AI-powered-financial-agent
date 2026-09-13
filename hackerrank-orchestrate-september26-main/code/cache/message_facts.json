@@ -8,7 +8,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Rincian penggajian Anda di Cobalt Systems telah berubah. Gaji bulanan Anda naik menjadi IDR 42750000. Perubahan ini berlaku mulai 2025-08-15. Jumlah yang diperbarui akan terlihat pada slip gaji berikutnya. Ref payroll EMP-0001."
   },
   "message_02": {
     "message_id": "message_02",
@@ -19,7 +19,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Tim payroll BrightPath Media telah mengirim pembaruan. Gaji rutin untuk penggajian berikutnya sudah dikonfirmasi. Slip gaji berikutnya akan menampilkan gaji rutin dan penyesuaian satu kali secara terpisah. Ref payroll EMP-0002."
   },
   "message_03": {
     "message_id": "message_03",
@@ -30,7 +30,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Rincian penggajian Anda di Greenfield Foods telah berubah. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. Jumlah akhir dan tanggal pembayaran belum disetujui. Kami akan mengirim pembaruan setelah tim payroll mengonfirmasi jumlah dan tanggalnya. Ref payroll EMP-0003."
   },
   "message_05": {
     "message_id": "message_05",
@@ -41,7 +41,7 @@
     "effective_date": "2024-09-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightPath Media has updated your payroll record. Your confirmed salary is now expected on 2024-09-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay around payday. Payroll ref EMP-0005."
   },
   "message_06": {
     "message_id": "message_06",
@@ -52,7 +52,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Greenfield Foods payroll here. Your next salary is reduced to EUR 1422.85. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0006."
   },
   "message_07": {
     "message_id": "message_07",
@@ -63,7 +63,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest service update from QuickCrew. The next QuickCrew payout is still pending. The weekly earnings shown in the QuickCrew app can change until the payout is closed. The balance isn\u2019t withdrawable until the payout shows as completed. Case ref SER-0007."
   },
   "message_08": {
     "message_id": "message_08",
@@ -74,7 +74,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Berikut informasi penggajian terbaru dari Greenfield Foods. Gaji pokok yang dikonfirmasi adalah IDR 38760000. Komisi dari transaksi yang masih berjalan belum disetujui. Transaksi yang masih berjalan tidak masuk pembayaran sampai komisinya dinyatakan diperoleh. Ref payroll EMP-0008."
   },
   "message_09": {
     "message_id": "message_09",
@@ -85,7 +85,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cobalt Systems about your upcoming pay. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We\u2019ll contact you separately if another shift block or contract is approved. Payroll ref EMP-0009."
   },
   "message_10": {
     "message_id": "message_10",
@@ -96,7 +96,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from HarborWorks. Regular salary of EUR 2717 resumes on 2025-08-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0010."
   },
   "message_11": {
     "message_id": "message_11",
@@ -107,7 +107,7 @@
     "effective_date": "2026-01-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Riverline Retail. Your first salary will be EUR 1661. The confirmed credit date is 2026-01-15. The money will appear after the bank posts the credit. Payroll ref EMP-0011."
   },
   "message_12": {
     "message_id": "message_12",
@@ -118,7 +118,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "StayLedger wanted to let you know about a change on your account. The renewed lease increases monthly rent by 12%. The new amount will be used for the next rent payment. Case ref SER-0012."
   },
   "message_13": {
     "message_id": "message_13",
@@ -129,7 +129,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s an update from Summit Bank on your recent account activity. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will remain visible in your transaction history. Txn ref BAN-0013."
   },
   "message_14": {
     "message_id": "message_14",
@@ -140,7 +140,7 @@
     "effective_date": null,
     "event_id_referenced": "event_1785",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "CartLane has new information about your payment or refund. Your refund has been initiated but has not reached your account yet. We\u2019ll send another update when the credit is completed. Order ref MER-0014."
   },
   "message_15": {
     "message_id": "message_15",
@@ -151,7 +151,7 @@
     "effective_date": null,
     "event_id_referenced": "event_1960",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest account information from ClearFund. Your portfolio\u2019s displayed market value has increased substantially. No units have been sold and no cash proceeds have been generated. The displayed value will continue to move with market prices. Account ref FIN-0015."
   },
   "message_16": {
     "message_id": "message_16",
@@ -162,7 +162,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest account information from DrawPay. Your prize claim has been verified and is still in payment processing. The payment has not been credited to your account yet. We\u2019ll confirm again if and when the money is actually credited. Account ref FIN-0016."
   },
   "message_17": {
     "message_id": "message_17",
@@ -173,7 +173,7 @@
     "effective_date": null,
     "event_id_referenced": "event_2165",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest account information from PrizeTrack. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won\u2019t be another payment unless a separate prize is confirmed. Account ref FIN-0017."
   },
   "message_04": {
     "message_id": "message_04",
@@ -184,7 +184,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Northstar Labs. Your temporary monthly pay is EUR 1037.52. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0004."
   },
   "message_18": {
     "message_id": "message_18",
@@ -195,7 +195,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Halo, ini InvoiceFlow. Klien menyetujui pembayaran faktur sebesar IDR 30780000. Penyelesaian diperkirakan pada 2025-08-15; faktur lain yang diajukan masih menunggu persetujuan. Hanya faktur yang sudah dikonfirmasi yang dapat dimasukkan dalam pembayaran berikutnya. Ref kasus SER-0018."
   },
   "message_19": {
     "message_id": "message_19",
@@ -206,7 +206,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, TaskLoop here. The next TaskLoop payout is still pending. The weekly earnings shown in the TaskLoop app can change until the payout is closed. The balance isn\u2019t withdrawable until the payout shows as completed. Case ref SER-0019."
   },
   "message_20": {
     "message_id": "message_20",
@@ -217,7 +217,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Cedar Health. Your regular salary for the next payroll is EUR 1452. The same payroll includes a one-time arrears adjustment of EUR 653.40. Your next payslip will show the regular pay and any one-off adjustment separately. Payroll ref EMP-0020."
   },
   "message_21": {
     "message_id": "message_21",
@@ -228,7 +228,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Riverline Retail. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We\u2019ll contact you separately if another shift block or contract is approved. Payroll ref EMP-0021."
   },
   "message_22": {
     "message_id": "message_22",
@@ -239,7 +239,7 @@
     "effective_date": "2025-02-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightPath Media has updated your payroll record. Your first salary will be ZAR 54120. The confirmed credit date is 2025-02-15. The money will appear after the bank posts the credit. Payroll ref EMP-0022."
   },
   "message_23": {
     "message_id": "message_23",
@@ -250,7 +250,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cedar Bank has reviewed the transaction on your account. The matching debit and credit came from a transfer between your two accounts. Both entries will remain visible in your transaction history. Txn ref BAN-0023."
   },
   "message_24": {
     "message_id": "message_24",
@@ -261,7 +261,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, InvoiceLane here. The client approved an invoice payment of INR 196000. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0024."
   },
   "message_25": {
     "message_id": "message_25",
@@ -272,7 +272,7 @@
     "effective_date": null,
     "event_id_referenced": "event_3230",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payment status from Everyday Store. Your refund has been initiated but has not reached your account yet. We\u2019ll send another update when the credit is completed. Order ref MER-0025."
   },
   "message_26": {
     "message_id": "message_26",
@@ -283,7 +283,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Northstar Labs payroll here. Your monthly salary has increased to USD 2988. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0026."
   },
   "message_27": {
     "message_id": "message_27",
@@ -294,7 +294,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cedar Health telah memperbarui catatan penggajian Anda. Gaji rutin Anda untuk penggajian berikutnya adalah IDR 21090000. Penggajian yang sama mencakup penyesuaian tunggakan satu kali sebesar IDR 9490500. Slip gaji berikutnya akan menampilkan gaji rutin dan penyesuaian satu kali secara terpisah. Ref payroll EMP-0027."
   },
   "message_28": {
     "message_id": "message_28",
@@ -305,7 +305,7 @@
     "effective_date": null,
     "event_id_referenced": "event_3491",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Rewards Desk here. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won\u2019t be another payment unless a separate prize is confirmed. Account ref FIN-0028."
   },
   "message_29": {
     "message_id": "message_29",
@@ -316,7 +316,7 @@
     "effective_date": "2024-06-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at BrightPath Media have changed. Your first salary will be EUR 1760. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0029."
   },
   "message_30": {
     "message_id": "message_30",
@@ -327,7 +327,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Greenfield Foods. One household employment record has ended. The remaining confirmed monthly salary is INR 148000. Any income that has ended should be removed from future estimates. Payroll ref EMP-0030."
   },
   "message_31": {
     "message_id": "message_31",
@@ -338,7 +338,7 @@
     "effective_date": "2024-09-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan singkat dari tim payroll HarborWorks. Gaji pertama dari perusahaan baru adalah IDR 32870000. Pembayaran sudah dikonfirmasi untuk 2024-09-15. Pemrosesan bank dapat memerlukan waktu seperti biasa setelah gaji dikirim. Ref payroll EMP-0031."
   },
   "message_32": {
     "message_id": "message_32",
@@ -349,7 +349,7 @@
     "effective_date": "2025-02-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Riverline Retail about your upcoming pay. Your first salary will be INR 115000. The confirmed credit date is 2025-02-15. The money will appear after the bank posts the credit. Payroll ref EMP-0032."
   },
   "message_33": {
     "message_id": "message_33",
@@ -360,7 +360,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan singkat dari tim payroll Northstar Labs. Gaji bulanan Anda naik menjadi IDR 17290000. Perubahan ini berlaku mulai 2026-07-15. Jumlah yang diperbarui akan terlihat pada slip gaji berikutnya. Ref payroll EMP-0033."
   },
   "message_34": {
     "message_id": "message_34",
@@ -371,7 +371,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "RideGrid ingin memberi tahu Anda tentang perubahan pada akun. Pembayaran berikutnya dari RideGrid masih tertunda. Penghasilan mingguan di aplikasi RideGrid masih dapat berubah sampai pembayaran diselesaikan. Saldo belum dapat ditarik sampai status pembayaran menunjukkan selesai. Ref kasus SER-0034."
   },
   "message_35": {
     "message_id": "message_35",
@@ -382,7 +382,7 @@
     "effective_date": null,
     "event_id_referenced": "event_4535",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your property maintenance payment was received on 24 July 2026. The receipt has the final INR amount and the original due date. Payment ref SER-0035."
   },
   "message_36": {
     "message_id": "message_36",
@@ -393,7 +393,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Rincian penggajian Anda di Greenfield Foods telah berubah. Gaji bulanan sementara Anda adalah IDR 31464000. Jumlah yang lebih rendah masih berlaku untuk penggajian berikutnya. Inilah jumlah yang saat ini dijadwalkan untuk periode penggajian tersebut. Ref payroll EMP-0036."
   },
   "message_37": {
     "message_id": "message_37",
@@ -404,7 +404,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods has updated your payroll record. One household employment record has ended. The remaining confirmed monthly salary is INR 126000. Any income that has ended should be removed from future estimates. Payroll ref EMP-0037."
   },
   "message_38": {
     "message_id": "message_38",
@@ -415,7 +415,7 @@
     "effective_date": "2024-06-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "HarborWorks has updated your payroll record. Your first salary from the new employer is INR 69000. It is confirmed for 2024-06-15. Bank processing may take the usual time after the payroll is released. Payroll ref EMP-0038."
   },
   "message_39": {
     "message_id": "message_39",
@@ -426,7 +426,7 @@
     "effective_date": null,
     "event_id_referenced": "event_4994",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Everyday Store here with an update on your payment. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We\u2019ll send another update when the credit is completed. Order ref MER-0039."
   },
   "message_40": {
     "message_id": "message_40",
@@ -437,7 +437,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Northstar Labs has updated your payroll record. Your monthly salary has increased to ZAR 42460. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0040."
   },
   "message_41": {
     "message_id": "message_41",
@@ -448,7 +448,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest transaction update from Summit Bank. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will remain visible in your transaction history. Txn ref BAN-0041."
   },
   "message_42": {
     "message_id": "message_42",
@@ -459,7 +459,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Rincian penggajian Anda di Cedar Health telah berubah. Salah satu sumber pendapatan kerja rumah tangga telah berakhir. Sisa gaji bulanan yang dikonfirmasi adalah IDR 25840000. Pendapatan yang sudah berakhir harus dikeluarkan dari perkiraan berikutnya. Ref payroll EMP-0042."
   },
   "message_43": {
     "message_id": "message_43",
@@ -470,7 +470,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update about your WorkDash account. The next WorkDash payout is still pending. The weekly earnings shown in the WorkDash app can change until the payout is closed. The balance isn\u2019t withdrawable until the payout shows as completed. Case ref SER-0043."
   },
   "message_44": {
     "message_id": "message_44",
@@ -481,7 +481,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Northstar Labs. Your next salary is reduced to USD 530.40. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0044."
   },
   "message_45": {
     "message_id": "message_45",
@@ -492,7 +492,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods has updated your payroll record. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We\u2019ll contact you separately if another shift block or contract is approved. Payroll ref EMP-0045."
   },
   "message_46": {
     "message_id": "message_46",
@@ -503,7 +503,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "InvoiceFlow has new information about your next payment. The client approved an invoice payment of USD 2112. Settlement is expected on 2025-08-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0046."
   },
   "message_47": {
     "message_id": "message_47",
@@ -514,7 +514,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new payment update from UrbanCart. The foreign-currency refund is still processing. The home-currency credit may change with the settlement-date rate. Order ref MER-0047."
   },
   "message_48": {
     "message_id": "message_48",
@@ -525,7 +525,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Northstar Labs have changed. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We\u2019ll send another update once payroll confirms the amount and date. Payroll ref EMP-0048."
   },
   "message_49": {
     "message_id": "message_49",
@@ -536,7 +536,7 @@
     "effective_date": "2026-04-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "PayPilot has new information about your next payment. The client approved an invoice payment of INR 116000. Settlement is expected on 2026-04-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0049."
   },
   "message_50": {
     "message_id": "message_50",
@@ -547,7 +547,7 @@
     "effective_date": "2025-02-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Riverline Retail has updated your payroll record. Your confirmed salary is now expected on 2025-02-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay around payday. Payroll ref EMP-0050."
   },
   "message_51": {
     "message_id": "message_51",
@@ -558,7 +558,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from RentNest. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0051."
   },
   "message_52": {
     "message_id": "message_52",
@@ -569,7 +569,7 @@
     "effective_date": null,
     "event_id_referenced": "event_6532",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A new notice is available for your PocketVest account. Your portfolio\u2019s displayed market value has increased substantially. No units have been sold and no cash proceeds have been generated. The displayed value will continue to move with market prices. Account ref FIN-0052."
   },
   "message_53": {
     "message_id": "message_53",
@@ -580,7 +580,7 @@
     "effective_date": "2025-05-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods telah memperbarui catatan penggajian Anda. Gaji sebesar USD 696 dikonfirmasi untuk 2025-05-15. Bank penerima akan mengonversinya dengan kurs pada tanggal penyelesaian. Jumlah yang diterima dalam mata uang utama bergantung pada kurs tanggal penyelesaian. Ref payroll EMP-0053."
   },
   "message_54": {
     "message_id": "message_54",
@@ -591,7 +591,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cedar Health payroll here. Your first salary will be ZAR 18700. The confirmed credit date is 2026-07-15. The money will appear after the bank posts the credit. Payroll ref EMP-0054."
   },
   "message_55": {
     "message_id": "message_55",
@@ -602,7 +602,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from RentTrack. The renewed lease increases monthly rent by 12%. The new amount will be used for the next rent payment. Case ref SER-0055."
   },
   "message_56": {
     "message_id": "message_56",
@@ -613,7 +613,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest service update from PayPilot. The client approved an invoice payment of ZAR 26180. Settlement is expected on 2025-08-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0056."
   },
   "message_57": {
     "message_id": "message_57",
@@ -624,7 +624,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Northstar Labs. Your employment has ended. There are no regular salary payments scheduled after the final settlement. Details of any final settlement will be sent separately. Payroll ref EMP-0057."
   },
   "message_58": {
     "message_id": "message_58",
@@ -635,7 +635,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from BrightPath Media. Your confirmed base salary is USD 3072. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0058."
   },
   "message_59": {
     "message_id": "message_59",
@@ -646,7 +646,7 @@
     "effective_date": null,
     "event_id_referenced": "event_7186",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from BuyBox about your recent order. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We\u2019ll send another update when the credit is completed. Order ref MER-0059."
   },
   "message_60": {
     "message_id": "message_60",
@@ -657,7 +657,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Northstar Labs payroll here. Your confirmed base salary is INR 158000. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0060."
   },
   "message_61": {
     "message_id": "message_61",
@@ -668,7 +668,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "StayLedger wanted to let you know about a change on your account. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0061."
   },
   "message_62": {
     "message_id": "message_62",
@@ -679,7 +679,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cedar Health payroll here. Your regular salary for the next payroll is USD 1752. The same payroll includes a one-time arrears adjustment of USD 788.40. Your next payslip will show the regular pay and any one-off adjustment separately. Payroll ref EMP-0062."
   },
   "message_63": {
     "message_id": "message_63",
@@ -690,7 +690,7 @@
     "effective_date": "2025-05-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cobalt Systems payroll here. Regular salary of INR 62000 resumes on 2025-05-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0063."
   },
   "message_64": {
     "message_id": "message_64",
@@ -701,7 +701,7 @@
     "effective_date": null,
     "event_id_referenced": "event_7941",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BuyBox confirmed that the tote bag order was paid in INR on 3 April 2026. The receipt has the final amount. Order ref MER-0064."
   },
   "message_65": {
     "message_id": "message_65",
@@ -712,7 +712,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Halo, ini tim payroll BrightPath Media. Gaji bulanan sementara Anda adalah IDR 8618400. Jumlah yang lebih rendah masih berlaku untuk penggajian berikutnya. Inilah jumlah yang saat ini dijadwalkan untuk periode penggajian tersebut. Ref payroll EMP-0065."
   },
   "message_66": {
     "message_id": "message_66",
@@ -723,7 +723,7 @@
     "effective_date": "2026-01-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, HarborWorks payroll here. Regular salary of INR 251000 resumes on 2026-01-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0066."
   },
   "message_67": {
     "message_id": "message_67",
@@ -734,7 +734,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from QuickPrize about your recent financial activity. Congratulations! You\u2019ve been selected for a cash prize. Pay the release charge today to receive the funds immediately. Pay the processing charge now to avoid losing the claim. Account ref FIN-0067."
   },
   "message_68": {
     "message_id": "message_68",
@@ -745,7 +745,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, ClientDesk here. The client approved an invoice payment of ZAR 13420. Settlement is expected on 2026-07-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0068."
   },
   "message_69": {
     "message_id": "message_69",
@@ -756,7 +756,7 @@
     "effective_date": null,
     "event_id_referenced": "event_8575",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cedar Bank has new information about one of your transactions. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempted. Txn ref BAN-0069."
   },
   "message_70": {
     "message_id": "message_70",
@@ -767,7 +767,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Cobalt Systems. Your confirmed base salary is ZAR 49280. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0070."
   },
   "message_71": {
     "message_id": "message_71",
@@ -778,7 +778,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from WinPoint about your recent financial activity. Your prize claim has been verified and is still in payment processing. The payment has not been credited to your account yet. We\u2019ll confirm again if and when the money is actually credited. Account ref FIN-0071."
   },
   "message_72": {
     "message_id": "message_72",
@@ -789,7 +789,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, ProjectPay here. The client approved an invoice payment of EUR 924. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0072."
   },
   "message_73": {
     "message_id": "message_73",
@@ -800,7 +800,7 @@
     "effective_date": "2025-05-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cobalt Systems payroll has posted a new update. Your confirmed salary is now expected on 2025-05-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay around payday. Payroll ref EMP-0073."
   },
   "message_74": {
     "message_id": "message_74",
@@ -811,7 +811,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods payroll has posted a new update. Your salary of EUR 1804 is confirmed for 2025-08-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home currency will depend on the settlement-date conversion. Payroll ref EMP-0074."
   },
   "message_75": {
     "message_id": "message_75",
@@ -822,7 +822,7 @@
     "effective_date": null,
     "event_id_referenced": "event_9420",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from ClaimDesk about your recent financial activity. The prize proceeds have reached your account after withholding. There won\u2019t be another payment unless a separate prize is confirmed. Account ref FIN-0075."
   },
   "message_76": {
     "message_id": "message_76",
@@ -833,7 +833,7 @@
     "effective_date": "2026-04-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from WorkPort. The client approved an invoice payment of EUR 1419. Settlement is expected on 2026-04-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0076."
   },
   "message_77": {
     "message_id": "message_77",
@@ -844,7 +844,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cobalt Systems has updated your payroll record. Your temporary monthly pay is INR 164880. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0077."
   },
   "message_78": {
     "message_id": "message_78",
@@ -855,7 +855,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods has updated your payroll record. Your confirmed base salary is ZAR 35860. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0078."
   },
   "message_79": {
     "message_id": "message_79",
@@ -866,7 +866,7 @@
     "effective_date": null,
     "event_id_referenced": "event_9805",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Nova Securities here. Your portfolio\u2019s displayed market value has increased substantially. The displayed value will continue to move with market prices. Account ref FIN-0079."
   },
   "message_80": {
     "message_id": "message_80",
@@ -877,7 +877,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at HarborWorks. Your first salary from the new employer is EUR 1815. It is confirmed for 2024-12-15. Bank processing may take the usual time after the payroll is released. Payroll ref EMP-0080."
   },
   "message_81": {
     "message_id": "message_81",
@@ -888,7 +888,7 @@
     "effective_date": "2025-05-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods payroll has posted a new update. Your first salary of EUR 2123 is scheduled for 2025-05-15. Payroll has approved the payment and sent it for processing. The credit will show only after the bank processes the payroll file. Payroll ref EMP-0081."
   },
   "message_82": {
     "message_id": "message_82",
@@ -899,7 +899,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Riverline Retail have changed. Your confirmed base salary is ZAR 33440. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0082."
   },
   "message_83": {
     "message_id": "message_83",
@@ -910,7 +910,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "WorkPort wanted to let you know about a change on your account. The client approved an invoice payment of ZAR 16720. Settlement is expected on 2025-08-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0083."
   },
   "message_84": {
     "message_id": "message_84",
@@ -921,7 +921,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada informasi baru dari HarborWorks tentang gaji Anda. Hubungan kerja Anda telah berakhir. Tidak ada pembayaran gaji rutin yang dijadwalkan setelah penyelesaian akhir. Rincian penyelesaian akhir akan dikirim secara terpisah. Ref payroll EMP-0084."
   },
   "message_85": {
     "message_id": "message_85",
@@ -932,7 +932,7 @@
     "effective_date": "2024-06-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from BrightPath Media about your upcoming pay. Your first salary will be EUR 627. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0085."
   },
   "message_86": {
     "message_id": "message_86",
@@ -943,7 +943,7 @@
     "effective_date": null,
     "event_id_referenced": "event_10521",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "MoneyHub account update: Your wallet was charged for the session at Charge Point 1110 in Krishnagiri on 3 September 2026 at 12:35 a.m. The receipt contains the final INR amount. Your employer has confirmed a USD 1296 salary credit for 15 September 2026. The salary will use the exchange rate when it settles. Account ref FIN-0086."
   },
   "message_87": {
     "message_id": "message_87",
@@ -954,7 +954,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Riverline Retail payroll has posted a new update. Your next salary is reduced to INR 148200. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0087."
   },
   "message_88": {
     "message_id": "message_88",
@@ -965,7 +965,7 @@
     "effective_date": null,
     "event_id_referenced": "event_10699",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from RewardLane. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won\u2019t be another payment unless a separate prize is confirmed. Account ref FIN-0088."
   },
   "message_89": {
     "message_id": "message_89",
@@ -976,7 +976,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Northstar Labs has updated your payroll record. Your monthly salary has increased to EUR 1188. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0089."
   },
   "message_90": {
     "message_id": "message_90",
@@ -987,7 +987,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cedar Health about your upcoming pay. Your regular salary for the next payroll is EUR 759. The same payroll includes a one-time arrears adjustment of EUR 341.55. Your next payslip will show the regular pay and any one-off adjustment separately. Payroll ref EMP-0090."
   },
   "message_91": {
     "message_id": "message_91",
@@ -998,7 +998,7 @@
     "effective_date": "2025-05-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cobalt Systems about your upcoming pay. Regular salary of INR 176000 resumes on 2025-05-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0091."
   },
   "message_92": {
     "message_id": "message_92",
@@ -1009,7 +1009,7 @@
     "effective_date": null,
     "event_id_referenced": "event_11129",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Halo, ini Arbor Invest. Hasil penjualan investasi Anda sudah masuk ke rekening tunai. Perintah penjualan sudah selesai dan tidak ada hasil penjualan yang masih tertunda. Riwayat transaksi menunjukkan jumlah yang benar-benar masuk ke rekening tunai. Ref akun FIN-0092."
   },
   "message_93": {
     "message_id": "message_93",
@@ -1020,7 +1020,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan singkat untuk akun ProjectPay Anda. Klien menyetujui pembayaran faktur sebesar IDR 15390000. Penyelesaian diperkirakan pada 2025-08-15; faktur lain yang diajukan masih menunggu persetujuan. Hanya faktur yang sudah dikonfirmasi yang dapat dimasukkan dalam pembayaran berikutnya. Ref kasus SER-0093."
   },
   "message_94": {
     "message_id": "message_94",
@@ -1031,7 +1031,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan singkat untuk akun TaskSprint Anda. Pembayaran berikutnya dari TaskSprint masih tertunda. Penghasilan mingguan di aplikasi TaskSprint masih dapat berubah sampai pembayaran diselesaikan. Saldo belum dapat ditarik sampai status pembayaran menunjukkan selesai. Ref kasus SER-0094."
   },
   "message_95": {
     "message_id": "message_95",
@@ -1042,7 +1042,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Greenfield Foods. Your salary of EUR 748 is confirmed for 2025-11-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home currency will depend on the settlement-date conversion. Payroll ref EMP-0095."
   },
   "message_96": {
     "message_id": "message_96",
@@ -1053,7 +1053,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "ClientDesk has new information about your next payment. The client approved an invoice payment of INR 152000. Settlement is expected on 2026-07-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0096."
   },
   "message_97": {
     "message_id": "message_97",
@@ -1064,7 +1064,7 @@
     "effective_date": "2024-09-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cedar Health payroll has posted a new update. Regular salary of ZAR 50160 resumes on 2024-09-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0097."
   },
   "message_98": {
     "message_id": "message_98",
@@ -1075,7 +1075,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Riverline Retail have changed. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We\u2019ll send another update once payroll confirms the amount and date. Payroll ref EMP-0098."
   },
   "message_99": {
     "message_id": "message_99",
@@ -1086,7 +1086,7 @@
     "effective_date": null,
     "event_id_referenced": "event_11925",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A new notice is available for your WinPoint account. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won\u2019t be another payment unless a separate prize is confirmed. Account ref FIN-0099."
   },
   "message_100": {
     "message_id": "message_100",
@@ -1097,7 +1097,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightPath Media payroll has posted a new update. Your temporary monthly pay is USD 2177.28. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0100."
   },
   "message_101": {
     "message_id": "message_101",
@@ -1108,7 +1108,7 @@
     "effective_date": "2025-05-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cobalt Systems has updated your payroll record. Your confirmed salary is now expected on 2025-05-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay around payday. Payroll ref EMP-0101."
   },
   "message_102": {
     "message_id": "message_102",
@@ -1119,7 +1119,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cedar Health payroll here. Your next salary is reduced to USD 1193.40. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0102."
   },
   "message_103": {
     "message_id": "message_103",
@@ -1130,7 +1130,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Rincian penggajian Anda di HarborWorks telah berubah. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal kerja atau kontrak berikutnya disetujui. Ref payroll EMP-0103."
   },
   "message_104": {
     "message_id": "message_104",
@@ -1141,7 +1141,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Riverline Retail about your upcoming pay. Your monthly salary has increased to USD 828. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0104."
   },
   "message_105": {
     "message_id": "message_105",
@@ -1152,7 +1152,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from HomePortal. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0105."
   },
   "message_106": {
     "message_id": "message_106",
@@ -1163,7 +1163,7 @@
     "effective_date": null,
     "event_id_referenced": "event_12709",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest transaction update from Summit Bank. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn ref BAN-0106."
   },
   "message_107": {
     "message_id": "message_107",
@@ -1174,7 +1174,7 @@
     "effective_date": "2025-02-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, HarborWorks payroll here. Your first salary will be ZAR 31900. The confirmed credit date is 2025-02-15. The money will appear after the bank posts the credit. Payroll ref EMP-0107."
   },
   "message_108": {
     "message_id": "message_108",
@@ -1185,7 +1185,7 @@
     "effective_date": null,
     "event_id_referenced": "event_13032",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "ClearFund has updated the latest account activity. The proceeds from your investment sale have settled in the cash account. The sale order is complete and there are no remaining proceeds pending. The transaction history shows the amount that actually reached the cash account. Account ref FIN-0108."
   },
   "message_109": {
     "message_id": "message_109",
@@ -1196,7 +1196,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from InvoiceFlow about recent activity on your account. The client approved an invoice payment of USD 2040. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0109."
   },
   "message_110": {
     "message_id": "message_110",
@@ -1207,7 +1207,7 @@
     "effective_date": null,
     "event_id_referenced": "event_13207",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "ClaimDesk has shared an update about your funds. The prize proceeds have reached your account after withholding. The claim is now closed and there are no further scheduled payments. There won\u2019t be another payment unless a separate prize is confirmed. Account ref FIN-0110."
   },
   "message_111": {
     "message_id": "message_111",
@@ -1218,7 +1218,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Cobalt Systems. Your first salary will be USD 864. The confirmed credit date is 2026-07-15. The money will appear after the bank posts the credit. Payroll ref EMP-0111."
   },
   "message_112": {
     "message_id": "message_112",
@@ -1229,7 +1229,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cobalt Systems payroll here. Your regular salary for the next payroll is INR 258000. The same payroll includes a one-time arrears adjustment of INR 116100. Your next payslip will show the regular pay and any one-off adjustment separately. Payroll ref EMP-0112."
   },
   "message_113": {
     "message_id": "message_113",
@@ -1240,7 +1240,7 @@
     "effective_date": "2026-04-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Greenfield Foods payroll here. Regular salary of EUR 1529 resumes on 2026-04-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0113."
   },
   "message_114": {
     "message_id": "message_114",
@@ -1251,7 +1251,7 @@
     "effective_date": null,
     "event_id_referenced": "event_13663",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A new notice is available for your StackWealth account. The proceeds from your investment sale have settled in the cash account. The sale order is complete and there are no remaining proceeds pending. The transaction history shows the amount that actually reached the cash account. Account ref FIN-0114."
   },
   "message_115": {
     "message_id": "message_115",
@@ -1262,7 +1262,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Riverline Retail has updated your payroll record. Your next salary is reduced to EUR 893.75. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0115."
   },
   "message_116": {
     "message_id": "message_116",
@@ -1273,7 +1273,7 @@
     "effective_date": "2024-09-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Halo, ini tim payroll Northstar Labs. Gaji pertama dari perusahaan baru adalah IDR 46170000. Pembayaran sudah dikonfirmasi untuk 2024-09-15. Pemrosesan bank dapat memerlukan waktu seperti biasa setelah gaji dikirim. Ref payroll EMP-0116."
   },
   "message_117": {
     "message_id": "message_117",
@@ -1284,7 +1284,7 @@
     "effective_date": null,
     "event_id_referenced": "event_14026",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Greenfield Foods have changed. The latest employer credit is the reimbursement for your earlier work expense. The claim is now closed and no additional reimbursement is scheduled. This payment is linked to an earlier work expense, not your regular salary. Payroll ref EMP-0117."
   },
   "message_118": {
     "message_id": "message_118",
@@ -1295,7 +1295,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, ShopNest here with an update on your payment. The bill was charged in a foreign currency. Your bank will confirm the final home-currency amount when the transaction settles. The final home-currency amount will use the rate applied when it settles. Order ref MER-0118."
   },
   "message_119": {
     "message_id": "message_119",
@@ -1306,7 +1306,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cedar Health payroll here. One household employment record has ended. The remaining confirmed monthly salary is EUR 1628. Any income that has ended should be removed from future estimates. Payroll ref EMP-0119."
   },
   "message_120": {
     "message_id": "message_120",
@@ -1317,7 +1317,7 @@
     "effective_date": "2025-05-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Greenfield Foods. Regular salary of INR 84000 resumes on 2025-05-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0120."
   },
   "message_121": {
     "message_id": "message_121",
@@ -1328,7 +1328,7 @@
     "effective_date": null,
     "event_id_referenced": "event_14399",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Northfield Bank here. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn ref BAN-0121."
   },
   "message_122": {
     "message_id": "message_122",
@@ -1339,7 +1339,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan singkat dari tim payroll HarborWorks. Gaji bulanan sementara Anda adalah IDR 23940000. Jumlah yang lebih rendah masih berlaku untuk penggajian berikutnya. Inilah jumlah yang saat ini dijadwalkan untuk periode penggajian tersebut. Ref payroll EMP-0122."
   },
   "message_123": {
     "message_id": "message_123",
@@ -1350,7 +1350,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from ShiftPay. The next ShiftPay payout is still pending. The weekly earnings shown in the ShiftPay app can change until the payout is closed. The balance isn\u2019t withdrawable until the payout shows as completed. Case ref SER-0123."
   },
   "message_124": {
     "message_id": "message_124",
@@ -1361,7 +1361,7 @@
     "effective_date": "2024-06-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Riverline Retail. Your first salary from the new employer is EUR 1672. It is confirmed for 2024-06-15. Bank processing may take the usual time after the payroll is released. Payroll ref EMP-0124."
   },
   "message_125": {
     "message_id": "message_125",
@@ -1372,7 +1372,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada informasi baru dari HarborWorks tentang gaji Anda. Gaji pertama Anda sebesar IDR 26790000 dijadwalkan pada 2025-11-15. Tim payroll sudah menyetujui pembayaran dan mengirimkannya untuk diproses. Dana baru akan terlihat setelah bank memproses berkas penggajian. Ref payroll EMP-0125."
   },
   "message_126": {
     "message_id": "message_126",
@@ -1383,7 +1383,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Halo, ini tim payroll Cedar Health. Gaji bulanan Anda naik menjadi IDR 29070000. Perubahan ini berlaku mulai 2026-07-15. Jumlah yang diperbarui akan terlihat pada slip gaji berikutnya. Ref payroll EMP-0126."
   },
   "message_127": {
     "message_id": "message_127",
@@ -1394,7 +1394,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods telah memperbarui catatan penggajian Anda. Gaji rutin Anda untuk penggajian berikutnya adalah IDR 30400000. Penggajian yang sama mencakup penyesuaian tunggakan satu kali sebesar IDR 13680000. Slip gaji berikutnya akan menampilkan gaji rutin dan penyesuaian satu kali secara terpisah. Ref payroll EMP-0127."
   },
   "message_128": {
     "message_id": "message_128",
@@ -1405,7 +1405,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightPath Media telah memperbarui catatan penggajian Anda. Gaji pokok yang dikonfirmasi adalah IDR 44270000. Komisi dari transaksi yang masih berjalan belum disetujui. Transaksi yang masih berjalan tidak masuk pembayaran sampai komisinya dinyatakan diperoleh. Ref payroll EMP-0128."
   },
   "message_129": {
     "message_id": "message_129",
@@ -1416,7 +1416,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cedar Health about your upcoming pay. Your employment has ended. There are no regular salary payments scheduled after the final settlement. Details of any final settlement will be sent separately. Payroll ref EMP-0129."
   },
   "message_130": {
     "message_id": "message_130",
@@ -1427,7 +1427,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "InvoiceFlow wanted to let you know about a change on your account. The client approved an invoice payment of USD 2340. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0130."
   },
   "message_131": {
     "message_id": "message_131",
@@ -1438,7 +1438,7 @@
     "effective_date": "2025-05-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from BrightPath Media. Your confirmed salary is now expected on 2025-05-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay around payday. Payroll ref EMP-0131."
   },
   "message_132": {
     "message_id": "message_132",
@@ -1449,7 +1449,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Greenfield Foods about your upcoming pay. Your next salary is reduced to INR 137150. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0132."
   },
   "message_133": {
     "message_id": "message_133",
@@ -1460,7 +1460,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, CartLane here with an update on your payment. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the settlement-date rate. Order ref MER-0133."
   },
   "message_134": {
     "message_id": "message_134",
@@ -1471,7 +1471,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan baru untuk akun WinPoint Anda. Klaim hadiah Anda sudah diverifikasi dan masih dalam proses pembayaran. Pembayaran tersebut belum masuk ke rekening Anda. Kami akan mengonfirmasi kembali jika dana benar-benar masuk. Ref akun FIN-0134."
   },
   "message_135": {
     "message_id": "message_135",
@@ -1482,7 +1482,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cedar Bank has new information about one of your transactions. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will remain visible in your transaction history. Txn ref BAN-0135."
   },
   "message_136": {
     "message_id": "message_136",
@@ -1493,7 +1493,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Summit Bank here. There are minimum payments due on two separate card accounts this month. A payment to one card will not cover the amount due on the other card. The minimums belong to separate accounts, so one payment won\u2019t clear the other. Txn ref BAN-0136."
   },
   "message_137": {
     "message_id": "message_137",
@@ -1504,7 +1504,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Greenfield Foods payroll here. Your salary of USD 1284 is confirmed for 2025-11-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home currency will depend on the settlement-date conversion. Payroll ref EMP-0137."
   },
   "message_138": {
     "message_id": "message_138",
@@ -1515,7 +1515,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Riverline Retail about your upcoming pay. Your temporary monthly pay is EUR 1924.56. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0138."
   },
   "message_139": {
     "message_id": "message_139",
@@ -1526,7 +1526,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cedar Health about your upcoming pay. Your confirmed base salary is EUR 847. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0139."
   },
   "message_140": {
     "message_id": "message_140",
@@ -1537,7 +1537,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightPath Media payroll has posted a new update. Your next salary is reduced to USD 1731.60. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0140."
   },
   "message_141": {
     "message_id": "message_141",
@@ -1548,7 +1548,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update about your FreelanceHub account. The client approved an invoice payment of EUR 2376. Settlement is expected on 2024-12-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0141."
   },
   "message_142": {
     "message_id": "message_142",
@@ -1559,7 +1559,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Pemberitahuan baru tersedia untuk akun RewardNow Anda. Selamat! Anda terpilih untuk menerima hadiah uang tunai. Bayar biaya pencairan hari ini agar dana segera diterima. Bayar biaya pemrosesan sekarang agar klaim tidak hangus. Ref akun FIN-0142."
   },
   "message_143": {
     "message_id": "message_143",
@@ -1570,7 +1570,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Northstar Labs. Your first salary will be INR 59000. The confirmed credit date is 2026-07-15. The money will appear after the bank posts the credit. Payroll ref EMP-0143."
   },
   "message_144": {
     "message_id": "message_144",
@@ -1581,7 +1581,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightPath Media has updated your payroll record. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We\u2019ll send another update once payroll confirms the amount and date. Payroll ref EMP-0144."
   },
   "message_145": {
     "message_id": "message_145",
@@ -1592,7 +1592,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "CartLane memiliki informasi baru tentang pembayaran atau pengembalian dana Anda. Tagihan dikenakan dalam mata uang asing. Bank Anda akan mengonfirmasi jumlah akhir dalam mata uang utama saat transaksi selesai. Jumlah akhir dalam mata uang utama menggunakan kurs saat transaksi selesai. Ref pesanan MER-0145."
   },
   "message_146": {
     "message_id": "message_146",
@@ -1603,7 +1603,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new payment update from BrightBasket. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the settlement-date rate. Order ref MER-0146."
   },
   "message_147": {
     "message_id": "message_147",
@@ -1614,7 +1614,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, HomePortal here. The renewed lease increases monthly rent by 12%. The new amount applies from the next rent payment. The new amount will be used for the next rent payment. Case ref SER-0147."
   },
   "message_148": {
     "message_id": "message_148",
@@ -1625,7 +1625,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from HarborWorks. Your next salary is reduced to ZAR 31889. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0148."
   },
   "message_149": {
     "message_id": "message_149",
@@ -1636,7 +1636,7 @@
     "effective_date": "2024-09-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from BrightPath Media about your upcoming pay. Your first salary from the new employer is INR 145000. It is confirmed for 2024-09-15. Bank processing may take the usual time after the payroll is released. Payroll ref EMP-0149."
   },
   "message_150": {
     "message_id": "message_150",
@@ -1647,7 +1647,7 @@
     "effective_date": null,
     "event_id_referenced": "event_17401",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Cedar Health. The latest employer credit is the reimbursement for your earlier work expense. The claim is now closed and no additional reimbursement is scheduled. This payment is linked to an earlier work expense, not your regular salary. Payroll ref EMP-0150."
   },
   "message_151": {
     "message_id": "message_151",
@@ -1658,7 +1658,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at HarborWorks have changed. Your monthly salary has increased to EUR 627. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0151."
   },
   "message_152": {
     "message_id": "message_152",
@@ -1669,7 +1669,7 @@
     "effective_date": null,
     "event_id_referenced": "event_17662",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "UrbanCart has received an update from the payment processor. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We\u2019ll send another update when the credit is completed. Order ref MER-0152."
   },
   "message_153": {
     "message_id": "message_153",
@@ -1680,7 +1680,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Cedar Health. Your temporary monthly pay is EUR 1750.32. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0153."
   },
   "message_154": {
     "message_id": "message_154",
@@ -1691,7 +1691,7 @@
     "effective_date": "2025-08-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Northstar Labs have changed. Your confirmed salary is now expected on 2025-08-23. This replaces the payroll date shown in the earlier update. Please use the revised date for anything you normally pay around payday. Payroll ref EMP-0154."
   },
   "message_155": {
     "message_id": "message_155",
@@ -1702,7 +1702,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, HarborWorks payroll here. Your next salary is reduced to EUR 1222.65. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0155."
   },
   "message_156": {
     "message_id": "message_156",
@@ -1713,7 +1713,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cedar Health telah memperbarui catatan penggajian Anda. Gaji pertama Anda sebesar IDR 38190000 dijadwalkan pada 2025-11-15. Tim payroll sudah menyetujui pembayaran dan mengirimkannya untuk diproses. Dana baru akan terlihat setelah bank memproses berkas penggajian. Ref payroll EMP-0156."
   },
   "message_157": {
     "message_id": "message_157",
@@ -1724,7 +1724,7 @@
     "effective_date": null,
     "event_id_referenced": "event_18269",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest transaction update from BluePeak Bank. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn ref BAN-0157."
   },
   "message_158": {
     "message_id": "message_158",
@@ -1735,7 +1735,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pemberitahuan dari ShiftPay tentang aktivitas akun terbaru. Pembayaran berikutnya dari ShiftPay masih tertunda. Penghasilan mingguan di aplikasi ShiftPay masih dapat berubah sampai pembayaran diselesaikan. Saldo belum dapat ditarik sampai status pembayaran menunjukkan selesai. Ref kasus SER-0158."
   },
   "message_159": {
     "message_id": "message_159",
@@ -1746,7 +1746,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada informasi baru dari HarborWorks tentang gaji Anda. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. Jumlah akhir dan tanggal pembayaran belum disetujui. Kami akan mengirim pembaruan setelah tim payroll mengonfirmasi jumlah dan tanggalnya. Ref payroll EMP-0159."
   },
   "message_160": {
     "message_id": "message_160",
@@ -1757,7 +1757,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Tim payroll Northstar Labs telah mengirim pembaruan. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal kerja atau kontrak berikutnya disetujui. Ref payroll EMP-0160."
   },
   "message_161": {
     "message_id": "message_161",
@@ -1768,7 +1768,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Harbor Bank has new information about one of your transactions. There are minimum payments due on two separate card accounts this month. A payment to one card will not cover the amount due on the other card. The minimums belong to separate accounts, so one payment won\u2019t clear the other. Txn ref BAN-0161."
   },
   "message_162": {
     "message_id": "message_162",
@@ -1779,7 +1779,7 @@
     "effective_date": "2026-01-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at BrightPath Media. Your first salary will be EUR 2024. The confirmed credit date is 2026-01-15. The money will appear after the bank posts the credit. Payroll ref EMP-0162."
   },
   "message_163": {
     "message_id": "message_163",
@@ -1790,7 +1790,7 @@
     "effective_date": null,
     "event_id_referenced": "event_19182",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Berikut informasi akun terbaru dari Nova Securities. Nilai investasi yang ditampilkan telah turun. Investasi tersebut belum dijual dan tidak ada transaksi tunai. Nilai yang ditampilkan akan terus berubah mengikuti harga pasar. Ref akun FIN-0163."
   },
   "message_164": {
     "message_id": "message_164",
@@ -1801,7 +1801,7 @@
     "effective_date": null,
     "event_id_referenced": "event_19334",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from BluePeak Bank about recent activity on your account. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn ref BAN-0164."
   },
   "message_165": {
     "message_id": "message_165",
@@ -1812,7 +1812,7 @@
     "effective_date": "2025-02-23",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada informasi baru dari Greenfield Foods tentang gaji Anda. Gaji yang sudah dikonfirmasi kini diperkirakan masuk pada 2025-02-23. Tanggal ini menggantikan tanggal penggajian pada pemberitahuan sebelumnya. Gunakan tanggal terbaru ini untuk pembayaran yang biasanya dilakukan saat gajian. Ref payroll EMP-0165."
   },
   "message_166": {
     "message_id": "message_166",
@@ -1823,7 +1823,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "HarborWorks payroll has posted a new update. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We\u2019ll contact you separately if another shift block or contract is approved. Payroll ref EMP-0166."
   },
   "message_167": {
     "message_id": "message_167",
@@ -1834,7 +1834,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BrightBasket has new information about your payment or refund. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the settlement-date rate. Order ref MER-0167."
   },
   "message_168": {
     "message_id": "message_168",
@@ -1845,7 +1845,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, QuickCrew here. The next QuickCrew payout is still pending. The weekly earnings shown in the QuickCrew app can change until the payout is closed. The balance isn\u2019t withdrawable until the payout shows as completed. Case ref SER-0168."
   },
   "message_169": {
     "message_id": "message_169",
@@ -1856,7 +1856,7 @@
     "effective_date": "2026-07-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Cobalt Systems. Your monthly salary has increased to USD 2424. The change applies from 2026-07-15. The revised amount will appear on your next payslip. Payroll ref EMP-0169."
   },
   "message_170": {
     "message_id": "message_170",
@@ -1867,7 +1867,7 @@
     "effective_date": "2026-04-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at BrightPath Media. Regular salary of EUR 1914 resumes on 2026-04-15. A new recurring childcare payment begins in the same month. The updated pay and deductions will appear from the next cycle. Payroll ref EMP-0170."
   },
   "message_171": {
     "message_id": "message_171",
@@ -1878,7 +1878,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at HarborWorks. Your temporary monthly pay is EUR 1346.40. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0171."
   },
   "message_172": {
     "message_id": "message_172",
@@ -1889,7 +1889,7 @@
     "effective_date": null,
     "event_id_referenced": "event_20379",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payment status from Everyday Store. Your refund has been initiated but has not reached your account yet. Most refunds are completed within ten business days. We\u2019ll send another update when the credit is completed. Order ref MER-0172."
   },
   "message_173": {
     "message_id": "message_173",
@@ -1900,7 +1900,7 @@
     "effective_date": "2026-01-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "There\u2019s a new account update from ClientDesk. The client approved an invoice payment of ZAR 35200. Settlement is expected on 2026-01-15; the other submitted invoices are still awaiting approval. Only invoices marked as confirmed should be included in the upcoming payout. Case ref SER-0173."
   },
   "message_174": {
     "message_id": "message_174",
@@ -1911,7 +1911,7 @@
     "effective_date": null,
     "event_id_referenced": "event_20615",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada informasi baru dari BrightPath Media tentang gaji Anda. Dana terbaru dari perusahaan adalah penggantian atas biaya kerja Anda sebelumnya. Klaim sudah ditutup dan tidak ada penggantian tambahan yang dijadwalkan. Pembayaran ini terkait biaya kerja sebelumnya, bukan gaji rutin Anda. Ref payroll EMP-0174."
   },
   "message_175": {
     "message_id": "message_175",
@@ -1922,7 +1922,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "HomePortal memiliki informasi baru tentang pembayaran berikutnya. Perpanjangan sewa menaikkan biaya sewa bulanan sebesar 12%. Jumlah baru berlaku mulai pembayaran sewa berikutnya. Jumlah baru akan digunakan untuk pembayaran sewa berikutnya. Ref kasus SER-0175."
   },
   "message_176": {
     "message_id": "message_176",
@@ -1933,7 +1933,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Greenfield Foods has updated your payroll record. Your regular salary for the next payroll is INR 260000. The same payroll includes a one-time arrears adjustment of INR 117000. Your next payslip will show the regular pay and any one-off adjustment separately. Payroll ref EMP-0176."
   },
   "message_177": {
     "message_id": "message_177",
@@ -1944,7 +1944,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Cobalt Systems payroll here. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We\u2019ll send another update once payroll confirms the amount and date. Payroll ref EMP-0177."
   },
   "message_178": {
     "message_id": "message_178",
@@ -1955,7 +1955,7 @@
     "effective_date": "2026-04-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada informasi baru dari Northstar Labs tentang gaji Anda. Gaji pertama Anda sebesar IDR 30400000. Tanggal kredit yang dikonfirmasi adalah 2026-04-15. Dana akan terlihat setelah bank mencatat kreditnya. Ref payroll EMP-0178."
   },
   "message_179": {
     "message_id": "message_179",
@@ -1966,7 +1966,7 @@
     "effective_date": null,
     "event_id_referenced": "event_21101",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Northfield Bank about recent activity on your account. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempted. Txn ref BAN-0179."
   },
   "message_180": {
     "message_id": "message_180",
@@ -1977,7 +1977,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Northstar Labs has updated your payroll record. One household employment record has ended. The remaining confirmed monthly salary is EUR 2827. Any income that has ended should be removed from future estimates. Payroll ref EMP-0180."
   },
   "message_181": {
     "message_id": "message_181",
@@ -1988,7 +1988,7 @@
     "effective_date": "2024-06-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cobalt Systems about your upcoming pay. Your first salary will be EUR 2772. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0181."
   },
   "message_182": {
     "message_id": "message_182",
@@ -1999,7 +1999,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Berikut informasi penggajian terbaru dari Northstar Labs. Gaji pertama Anda sebesar IDR 16910000 dijadwalkan pada 2025-11-15. Tim payroll sudah menyetujui pembayaran dan mengirimkannya untuk diproses. Dana baru akan terlihat setelah bank memproses berkas penggajian. Ref payroll EMP-0182."
   },
   "message_183": {
     "message_id": "message_183",
@@ -2010,7 +2010,7 @@
     "effective_date": null,
     "event_id_referenced": "event_21582",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Summit Bank has reviewed the transaction on your account. The extra card charge is still being investigated. A reversal has not been posted to the account yet. The dispute is open and no reversal has been posted yet. Txn ref BAN-0183."
   },
   "message_184": {
     "message_id": "message_184",
@@ -2021,7 +2021,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, MarketDock here with an update on your payment. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the settlement-date rate. Order ref MER-0184."
   },
   "message_185": {
     "message_id": "message_185",
@@ -2032,7 +2032,7 @@
     "effective_date": null,
     "event_id_referenced": "event_21785",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan baru untuk akun PocketVest Anda. Nilai investasi yang ditampilkan telah turun. Investasi tersebut belum dijual dan tidak ada transaksi tunai. Nilai yang ditampilkan akan terus berubah mengikuti harga pasar. Ref akun FIN-0185."
   },
   "message_186": {
     "message_id": "message_186",
@@ -2043,7 +2043,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Ada pembaruan singkat dari tim payroll BrightPath Media. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal kerja atau kontrak berikutnya disetujui. Ref payroll EMP-0186."
   },
   "message_187": {
     "message_id": "message_187",
@@ -2054,7 +2054,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Northstar Labs have changed. One household employment record has ended. The remaining confirmed monthly salary is USD 912. Any income that has ended should be removed from future estimates. Payroll ref EMP-0187."
   },
   "message_188": {
     "message_id": "message_188",
@@ -2065,7 +2065,7 @@
     "effective_date": "2026-01-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Cobalt Systems payroll has posted a new update. Your first salary will be INR 62000. The confirmed credit date is 2026-01-15. The money will appear after the bank posts the credit. Payroll ref EMP-0188."
   },
   "message_189": {
     "message_id": "message_189",
@@ -2076,7 +2076,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Riverline Retail telah memperbarui catatan penggajian Anda. Kontrak musiman saat ini telah berakhir. Belum ada pendapatan di luar musim atau perpanjangan kontrak yang dikonfirmasi. Kami akan menghubungi Anda jika jadwal kerja atau kontrak berikutnya disetujui. Ref payroll EMP-0189."
   },
   "message_190": {
     "message_id": "message_190",
@@ -2087,7 +2087,7 @@
     "effective_date": "2025-08-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Riverline Retail payroll here. Your first salary of EUR 968 is scheduled for 2025-08-15. Payroll has approved the payment and sent it for processing. The credit will show only after the bank processes the payroll file. Payroll ref EMP-0190."
   },
   "message_191": {
     "message_id": "message_191",
@@ -2098,7 +2098,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A quick update from the payroll team at Cedar Health. Your salary of USD 1680 is confirmed for 2025-11-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home currency will depend on the settlement-date conversion. Payroll ref EMP-0191."
   },
   "message_192": {
     "message_id": "message_192",
@@ -2109,7 +2109,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Cedar Health. Your employment has ended. There are no regular salary payments scheduled after the final settlement. Details of any final settlement will be sent separately. Payroll ref EMP-0192."
   },
   "message_193": {
     "message_id": "message_193",
@@ -2120,7 +2120,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Northstar Labs payroll has posted a new update. Your temporary monthly pay is EUR 1528.56. The reduced amount continues for the next payroll. This is the amount currently scheduled for the affected pay cycle. Payroll ref EMP-0193."
   },
   "message_194": {
     "message_id": "message_194",
@@ -2131,7 +2131,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Riverline Retail payroll has posted a new update. Your confirmed base salary is USD 1548. The commission shown for open deals is still pending approval. Open deals will stay out of the payout until the commission is marked as earned. Payroll ref EMP-0194."
   },
   "message_195": {
     "message_id": "message_195",
@@ -2142,7 +2142,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest payroll information from Greenfield Foods. Your next salary is reduced to USD 702. The adjustment is due to approved unpaid leave. The adjustment will be visible on your next payslip. Payroll ref EMP-0195."
   },
   "message_196": {
     "message_id": "message_196",
@@ -2153,7 +2153,7 @@
     "effective_date": "2024-12-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Cobalt Systems about your upcoming pay. Your first salary from the new employer is ZAR 53680. It is confirmed for 2024-12-15. Bank processing may take the usual time after the payroll is released. Payroll ref EMP-0196."
   },
   "message_197": {
     "message_id": "message_197",
@@ -2164,7 +2164,7 @@
     "effective_date": null,
     "event_id_referenced": "event_23203",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Summit Bank memiliki informasi baru tentang salah satu transaksi Anda. Tagihan kartu tambahan masih dalam penyelidikan. Dana pembalikannya belum tercatat di rekening. Sengketa masih terbuka dan dana pembalikan belum tercatat. Ref transaksi BAN-0197."
   },
   "message_198": {
     "message_id": "message_198",
@@ -2175,7 +2175,7 @@
     "effective_date": null,
     "event_id_referenced": "event_23306",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Oakline Bank has reviewed the transaction on your account. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempted. Txn ref BAN-0198."
   },
   "message_199": {
     "message_id": "message_199",
@@ -2186,7 +2186,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Greenfield Foods have changed. Your quarterly bonus is still subject to the final performance review. The final amount and payment date have not been approved yet. We\u2019ll send another update once payroll confirms the amount and date. Payroll ref EMP-0199."
   },
   "message_200": {
     "message_id": "message_200",
@@ -2197,7 +2197,7 @@
     "effective_date": "2024-06-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Riverline Retail payroll here. Your first salary will be INR 214000. The confirmed credit date is 2024-06-15. The money will appear after the bank posts the credit. Payroll ref EMP-0200."
   },
   "message_201": {
     "message_id": "message_201",
@@ -2208,7 +2208,7 @@
     "effective_date": null,
     "event_id_referenced": "event_23855",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "BluePeak Bank has reviewed the transaction on your account. The previous debit attempt failed. The bill is still outstanding and another debit will be attempted. The bill is still open and another debit may be attempted. Txn ref BAN-0201."
   },
   "message_202": {
     "message_id": "message_202",
@@ -2219,7 +2219,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Summit Bank here. The matching debit and credit came from a transfer between your two accounts. Both accounts are registered under the same account holder. Both entries will remain visible in your transaction history. Txn ref BAN-0202."
   },
   "message_203": {
     "message_id": "message_203",
@@ -2230,7 +2230,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Tim payroll Cedar Health telah mengirim pembaruan. Salah satu sumber pendapatan kerja rumah tangga telah berakhir. Sisa gaji bulanan yang dikonfirmasi adalah IDR 48260000. Pendapatan yang sudah berakhir harus dikeluarkan dari perkiraan berikutnya. Ref payroll EMP-0203."
   },
   "message_204": {
     "message_id": "message_204",
@@ -2241,7 +2241,7 @@
     "effective_date": "2025-05-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Riverline Retail have changed. Your salary of EUR 1485 is confirmed for 2025-05-15. The receiving bank will convert it using the rate applied on the settlement date. The amount received in your home currency will depend on the settlement-date conversion. Payroll ref EMP-0204."
   },
   "message_205": {
     "message_id": "message_205",
@@ -2252,7 +2252,7 @@
     "effective_date": null,
     "event_id_referenced": "event_24352",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Nova Securities has shared an update about your funds. The displayed value of the investment has fallen. The holding has not been sold and there has been no cash transaction. The displayed value will continue to move with market prices. Account ref FIN-0205."
   },
   "message_206": {
     "message_id": "message_206",
@@ -2263,7 +2263,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from Greenfield Foods about your upcoming pay. The current seasonal contract has ended. No off-season income or renewal has been confirmed. We\u2019ll contact you separately if another shift block or contract is approved. Payroll ref EMP-0206."
   },
   "message_207": {
     "message_id": "message_207",
@@ -2274,7 +2274,7 @@
     "effective_date": null,
     "event_id_referenced": "event_24534",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Northstar Funds has shared an update about your funds. Your portfolio\u2019s displayed market value has increased substantially. No units have been sold and no cash proceeds have been generated. The displayed value will continue to move with market prices. Account ref FIN-0207."
   },
   "message_208": {
     "message_id": "message_208",
@@ -2285,7 +2285,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "A note from CartLane about your recent purchase. The bill was charged in a foreign currency. Your bank will confirm the final home-currency amount when the transaction settles. The final home-currency amount will use the rate applied when it settles. Order ref MER-0208."
   },
   "message_209": {
     "message_id": "message_209",
@@ -2296,7 +2296,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Here\u2019s the latest account information from PrizeLine. Your prize claim has been verified and is still in payment processing. The payment has not been credited to your account yet. We\u2019ll confirm again if and when the money is actually credited. Account ref FIN-0209."
   },
   "message_210": {
     "message_id": "message_210",
@@ -2307,7 +2307,7 @@
     "effective_date": "2025-11-15",
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Your payroll details at Northstar Labs have changed. Your first salary of ZAR 38280 is scheduled for 2025-11-15. Payroll has approved the payment and sent it for processing. The credit will show only after the bank processes the payroll file. Payroll ref EMP-0210."
   },
   "message_211": {
     "message_id": "message_211",
@@ -2318,7 +2318,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Hi, Greenfield Foods payroll here. Your regular salary for the next payroll is INR 103000. The same payroll includes a one-time arrears adjustment of INR 46350. Your next payslip will show the regular pay and any one-off adjustment separately. Payroll ref EMP-0211."
   },
   "message_212": {
     "message_id": "message_212",
@@ -2329,7 +2329,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Tim payroll Cobalt Systems telah mengirim pembaruan. Bonus kuartalan Anda masih menunggu hasil akhir penilaian kinerja. Jumlah akhir dan tanggal pembayaran belum disetujui. Kami akan mengirim pembaruan setelah tim payroll mengonfirmasi jumlah dan tanggalnya. Ref payroll EMP-0212."
   },
   "message_213": {
     "message_id": "message_213",
@@ -2340,7 +2340,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Harbor Bank telah meninjau transaksi pada rekening Anda. Debit dan kredit dengan jumlah yang sama berasal dari transfer antara dua rekening Anda. Kedua rekening terdaftar atas nama pemilik yang sama. Kedua transaksi akan tetap terlihat dalam riwayat rekening Anda. Ref transaksi BAN-0213."
   },
   "message_214": {
     "message_id": "message_214",
@@ -2351,7 +2351,7 @@
     "effective_date": null,
     "event_id_referenced": null,
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "Everyday Store has new information about your payment or refund. The foreign-currency refund is still processing. The final home-currency credit will be calculated when the refund settles. The home-currency credit may change with the settlement-date rate. Order ref MER-0214."
   },
   "message_215": {
     "message_id": "message_215",
@@ -2362,6 +2362,6 @@
     "effective_date": null,
     "event_id_referenced": "event_25342",
     "confidence": 0.95,
-    "raw_note": ""
+    "raw_note": "UrbanCart memiliki informasi baru tentang pembayaran atau pengembalian dana Anda. Pengembalian dana sudah diproses, tetapi belum masuk ke rekening Anda. Sebagian besar pengembalian dana selesai dalam sepuluh hari kerja. Kami akan mengirim pembaruan saat kredit sudah selesai. Ref pesanan MER-0215."
   }
 }

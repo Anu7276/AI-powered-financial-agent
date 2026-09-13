@@ -42,6 +42,7 @@ from engine.solver import (
 from engine.planner import select_best_plan, PaymentPlan
 from engine.explain import generate_explanation
 from engine.verify import verify_row
+from engine.router import EvidenceRouter
 
 
 # ── Token tracking ────────────────────────────────────────────────────────────
@@ -178,7 +179,13 @@ def process_request(request: pd.Series, ds: DataStore, verbose: bool = False) ->
         # 3. Load message facts
         message_facts = load_message_facts(ds, user_id, request_id)
 
-        # 4. Reconcile events
+        # 4. Route evidence via EvidenceRouter (Layer 2)
+        router = EvidenceRouter(ds)
+        routed_evidence = router.route_evidence(
+            user_id, request_id, request_date, image_facts, message_facts
+        )
+
+        # 5. Reconcile events
         entries, salary_overrides = reconcile_user_events(
             user_id, ds, image_facts, message_facts, request_date
         )
@@ -186,7 +193,7 @@ def process_request(request: pd.Series, ds: DataStore, verbose: bool = False) ->
         if verbose:
             print(f"  Events reconciled: {len(entries)}")
 
-        # 5. Build 90-day forecast
+        # 6. Build 90-day forecast
         forecast = build_forecast(
             entries, message_facts, profile, request_date, horizon_days=90
         )
@@ -195,22 +202,22 @@ def process_request(request: pd.Series, ds: DataStore, verbose: bool = False) ->
             future_events = [fe for fe in forecast if fe.date > request_date]
             print(f"  Forecast entries (future): {len(future_events)}")
 
-        # 6. Select best plan
+        # 7. Select best plan
         plan = select_best_plan(
             request, profile, entries, forecast, message_facts, ds
         )
 
-        # 7. Generate explanation
+        # 8. Generate explanation
         explanation = generate_explanation(plan, request, profile, currency)
 
-        # 8. Format earliest date
+        # 9. Format earliest date
         efp = plan.earliest_date_for_full_payment
         efp_str = format_date(efp)
 
-        # 9. Format spending changes
+        # 10. Format spending changes
         spending_str = format_spending_changes(plan)
 
-        # 10. Build output row
+        # 11. Build output row
         output = {
             "request_id": request_id,
             "amount_safe_to_pay": round(plan.amount_safe_to_pay, 2),
@@ -220,9 +227,13 @@ def process_request(request: pd.Series, ds: DataStore, verbose: bool = False) ->
             "earliest_date_for_full_payment": efp_str,
             "spending_changes_needed": spending_str,
             "decision_explanation": explanation,
+            "_plan": plan,
+            "_forecast": forecast,
+            "_entries": entries,
+            "_profile": profile,
         }
 
-        # 11. Verify
+        # 12. Verify
         output, violations = verify_row(output, request, profile)
         if violations and verbose:
             for v in violations:
@@ -262,6 +273,10 @@ def evaluate_against_sample(ds: DataStore) -> dict:
     correct_status = 0
     correct_method = 0
     amount_errors = []
+    expected_safes = []
+    currencies = []
+    error_report_items = []
+    decision_traces = {}
 
     for _, req in sample.iterrows():
         output = process_request(req, ds, verbose=True)
@@ -278,9 +293,68 @@ def evaluate_against_sample(ds: DataStore) -> dict:
         if method_ok:
             correct_method += 1
         amount_errors.append(safe_err)
+        expected_safes.append(expected_safe)
+
+        # Retrieve tracked context for error reporting
+        user_id = req["user_id"]
+        req_id = req["request_id"]
+        prof = output.get("_profile")
+        if prof is None:
+            prof = ds.get_profile(user_id)
+        currency = prof.get("home_currency", "USD")
+        currencies.append(currency)
+
+        fc = output.get("_forecast") if output.get("_forecast") is not None else []
+        entries = output.get("_entries") if output.get("_entries") is not None else []
+        plan_obj = output.get("_plan")
+
+        future_income = round(sum(fe.amount for fe in fc if fe.direction == "credit" and fe.date > req["request_date"]), 2)
+        future_expenses = round(sum(fe.amount for fe in fc if fe.direction == "debit" and fe.date > req["request_date"]), 2)
+        recurring_count = len([e for e in entries if getattr(e, "status", "") == "settled"])
+
+        opt_df = ds.get_request_options(req_id)
+        opt_ids = opt_df["payment_option_id"].tolist() if not opt_df.empty else []
+
+        audit_trail = getattr(plan_obj, "audit_trail", {}) if plan_obj else {}
+        evidence_graph = getattr(plan_obj, "evidence_graph", {}) if plan_obj else {}
+
+        decision_traces[req_id] = {
+            "request_id": req_id,
+            "user_id": user_id,
+            "affordability_status": output["affordability_status"],
+            "recommended_payment_method": output["recommended_payment_method"],
+            "amount_safe_to_pay": output["amount_safe_to_pay"],
+            "audit_trail": audit_trail,
+            "evidence_graph": evidence_graph,
+        }
+
+        error_report_items.append({
+            "request_id": req_id,
+            "user_id": user_id,
+            "currency": currency,
+            "current_balance": float(prof.get("current_available_balance", 0)),
+            "requested_amount": float(req["requested_amount"]),
+            "safe_amount": output["amount_safe_to_pay"],
+            "expected_safe_amount": expected_safe,
+            "safe_amount_error": round(safe_err, 2),
+            "minimum_balance": float(prof.get("minimum_balance_to_keep", 0)),
+            "future_income": future_income,
+            "future_expenses": future_expenses,
+            "recurring_events": recurring_count,
+            "payment_options": opt_ids,
+            "earliest_safe_date": output["earliest_date_for_full_payment"],
+            "chosen_method": output["recommended_payment_method"],
+            "expected_method": expected_method,
+            "actual_status": output["affordability_status"],
+            "expected_status": expected_status,
+            "status_match": status_ok,
+            "method_match": method_ok,
+            "audit_trail": audit_trail,
+            "evidence_graph": evidence_graph
+        })
 
         results.append({
-            "request_id": req["request_id"],
+            "request_id": req_id,
             "expected_status": expected_status,
             "got_status": output["affordability_status"],
             "status_ok": status_ok,
@@ -293,21 +367,89 @@ def evaluate_against_sample(ds: DataStore) -> dict:
         })
 
     n = len(results)
+    err_arr = np.array(amount_errors)
+    mae = float(np.mean(err_arr))
+    rmse = float(np.sqrt(np.mean(np.square(err_arr))))
+    median_ae = float(np.median(err_arr))
+    p95_ae = float(np.percentile(err_arr, 95))
+    max_ae = float(np.max(err_arr))
+    exact_matches = int(np.sum(err_arr <= 1.0))
+    exact_match_pct = (exact_matches / n) * 100
+
+    rel_errors = [err / max(exp, 1.0) for err, exp in zip(err_arr, expected_safes)]
+    mean_rel_mae_pct = float(np.mean(rel_errors)) * 100
+    median_rel_mae_pct = float(np.median(rel_errors)) * 100
+
+    non_idr_errs = [err for err, cur in zip(err_arr, currencies) if cur != "IDR"]
+    idr_errs = [err for err, cur in zip(err_arr, currencies) if cur == "IDR"]
+    non_idr_mae = float(np.mean(non_idr_errs)) if non_idr_errs else 0.0
+    non_idr_median = float(np.median(non_idr_errs)) if non_idr_errs else 0.0
+    idr_mae = float(np.mean(idr_errs)) if idr_errs else 0.0
+    idr_median = float(np.median(idr_errs)) if idr_errs else 0.0
+
     summary = {
         "n": n,
         "status_accuracy": correct_status / n,
         "method_accuracy": correct_method / n,
-        "mean_amount_error": float(np.mean(amount_errors)),
-        "median_amount_error": float(np.median(amount_errors)),
+        "mae": mae,
+        "rmse": rmse,
+        "median_ae": median_ae,
+        "p95_ae": p95_ae,
+        "max_ae": max_ae,
+        "exact_match_pct": exact_match_pct,
+        "mean_relative_error_pct": mean_rel_mae_pct,
+        "median_relative_error_pct": median_rel_mae_pct,
+        "non_idr_mae": non_idr_mae,
+        "non_idr_median": non_idr_median,
+        "idr_mae": idr_mae,
+        "idr_median": idr_median,
         "details": results,
     }
 
-    print(f"\n{'='*60}")
-    print(f"EVALUATION RESULTS ({n} samples)")
-    print(f"  Status accuracy:  {correct_status}/{n} = {100*correct_status/n:.1f}%")
-    print(f"  Method accuracy:  {correct_method}/{n} = {100*correct_method/n:.1f}%")
-    print(f"  Mean amount err:  {np.mean(amount_errors):.2f}")
-    print(f"  Median amount err:{np.median(amount_errors):.2f}")
+    # Save evaluation/error_report.json and decision_traces.json
+    root_eval_dir = Path(__file__).resolve().parent.parent / "evaluation"
+    root_eval_dir.mkdir(exist_ok=True)
+    with open(root_eval_dir / "error_report.json", "w") as f:
+        json.dump({
+            "metrics": {
+                "status_accuracy": f"{correct_status}/{n} ({100*correct_status/n:.1f}%)",
+                "method_accuracy": f"{correct_method}/{n} ({100*correct_method/n:.1f}%)",
+                "mae": round(mae, 2),
+                "rmse": round(rmse, 2),
+                "median_ae": round(median_ae, 2),
+                "p95_ae": round(p95_ae, 2),
+                "max_ae": round(max_ae, 2),
+                "exact_match_pct": f"{exact_match_pct:.1f}%",
+                "mean_relative_error_pct": f"{mean_rel_mae_pct:.2f}%",
+                "median_relative_error_pct": f"{median_rel_mae_pct:.2f}%",
+                "non_idr_mae": round(non_idr_mae, 2),
+                "non_idr_median": round(non_idr_median, 2),
+            },
+            "cases": error_report_items
+        }, f, indent=2)
+
+    with open(root_eval_dir / "decision_traces.json", "w") as f:
+        json.dump(decision_traces, f, indent=2)
+
+    print(f"\n{'='*70}")
+    print(f"COMPREHENSIVE BENCHMARK EVALUATION RESULTS ({n} samples)")
+    print(f"{'='*70}")
+    print(f"  Affordability Status Accuracy: {correct_status}/{n} = {100*correct_status/n:.1f}%")
+    print(f"  Payment Method Accuracy:       {correct_method}/{n} = {100*correct_method/n:.1f}%")
+    print(f"  Exact Match (Safe Amount):     {exact_matches}/{n} = {exact_match_pct:.1f}%")
+    print(f"  -------------------------------------------------------------")
+    print(f"  Headroom MAE:                  {mae:,.2f}")
+    print(f"  Median Absolute Error:         {median_ae:,.2f}")
+    print(f"  RMSE:                          {rmse:,.2f}")
+    print(f"  P95 Absolute Error:            {p95_ae:,.2f}")
+    print(f"  Max Absolute Error:            {max_ae:,.2f}")
+    print(f"  Relative MAE %:                {mean_rel_mae_pct:.2f}%")
+    print(f"  Median Relative Error %:       {median_rel_mae_pct:.2f}%")
+    print(f"  -------------------------------------------------------------")
+    print(f"  Non-IDR Headroom MAE (USD/EUR/INR): {non_idr_mae:,.2f}")
+    print(f"  Non-IDR Median AE:                  {non_idr_median:,.2f}")
+    print(f"  IDR Headroom MAE (1 USD ~ 15k IDR): {idr_mae:,.2f}")
+    print(f"{'='*70}")
     print()
     print("  Per-request results:")
     for r in results:
@@ -316,6 +458,10 @@ def evaluate_against_sample(ds: DataStore) -> dict:
         print(f"  {r['request_id']:12} | status {s} ({r['expected_status'][:8]:8}->{r['got_status'][:8]:8}) | "
               f"method {m} ({r['expected_method'][:12]:12}->{r['got_method'][:12]:12}) | "
               f"safe err={r['safe_error']:.0f}")
+
+    print(f"\nArtifacts generated:")
+    print(f"  - {root_eval_dir / 'error_report.json'}")
+    print(f"  - {root_eval_dir / 'decision_traces.json'}")
 
     return summary
 

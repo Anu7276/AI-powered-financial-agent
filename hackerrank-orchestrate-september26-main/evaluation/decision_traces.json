@@ -1,0 +1,673 @@
+{
+  "request_01": {
+    "request_id": "request_01",
+    "user_id": "user_01",
+    "affordability_status": "affordable_now",
+    "recommended_payment_method": "full_payment",
+    "amount_safe_to_pay": 25256.0,
+    "audit_trail": {
+      "rejected_reasons": {
+        "installments": "user profile excludes installments",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": 4510.449999999997
+    },
+    "evidence_graph": {
+      "decision": "affordable_now",
+      "recommended_method": "full_payment",
+      "binding_constraint": "minimum_balance_to_keep=18000.0",
+      "evidence": [
+        "event:event_102",
+        "event:event_103"
+      ],
+      "calculation_trace": "balance=58481.1, min_keep=18000.0, safe_today=25256.0, earliest_date=2024-03-03 00:00:00",
+      "verified": true
+    }
+  },
+  "request_02": {
+    "request_id": "request_02",
+    "user_id": "user_02",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "installments",
+    "amount_safe_to_pay": 17845190.19,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_07": "duration (18.6 mo) exceeds user maximum (7 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -28172809.799999997
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "installments",
+      "binding_constraint": "minimum_balance_to_keep=29158400.0",
+      "evidence": [
+        "event:event_185"
+      ],
+      "calculation_trace": "balance=60383889.2, min_keep=29158400.0, safe_today=17845190.19, earliest_date=2025-09-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_03": {
+    "request_id": "request_03",
+    "user_id": "user_03",
+    "affordability_status": "affordable_later",
+    "recommended_payment_method": "wait",
+    "amount_safe_to_pay": 618123.85,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (618123.85 < 5491000.00) or pre-salary buffer tight",
+        "wait": "earliest full date (2019-11-30) misses desired completion deadline (2019-11-15)",
+        "installment_payment_option_09": "duration (19.6 mo) exceeds user maximum (2 mo)",
+        "installment_payment_option_10": "duration (24.8 mo) exceeds user maximum (2 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": false,
+      "pre_sal_margin": -4872876.140000001
+    },
+    "evidence_graph": {
+      "decision": "affordable_later",
+      "recommended_method": "wait",
+      "binding_constraint": "minimum_balance_to_keep=2668700.0",
+      "evidence": [
+        "event:event_254"
+      ],
+      "calculation_trace": "balance=5810300.0, min_keep=2668700.0, safe_today=618123.85, earliest_date=2019-11-30 00:00:00",
+      "verified": true
+    }
+  },
+  "request_04": {
+    "request_id": "request_04",
+    "user_id": "user_04",
+    "affordability_status": "affordable_later",
+    "recommended_payment_method": "wait",
+    "amount_safe_to_pay": 12206665.54,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (12206665.54 < 12693000.00) or pre-salary buffer tight",
+        "installments": "user profile excludes installments",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 2,
+      "wait_completes": true,
+      "pre_sal_margin": -486334.450000003
+    },
+    "evidence_graph": {
+      "decision": "affordable_later",
+      "recommended_method": "wait",
+      "binding_constraint": "minimum_balance_to_keep=30686600.0",
+      "evidence": [
+        "event:event_357"
+      ],
+      "calculation_trace": "balance=52206950.0, min_keep=30686600.0, safe_today=12206665.54, earliest_date=2024-06-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_05": {
+    "request_id": "request_05",
+    "user_id": "user_05",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 0.0,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (0.00 < 15488.00) or pre-salary buffer tight",
+        "wait": "no date within 90-day forecast horizon where full payment is safe",
+        "installment_payment_option_14": "duration (18.6 mo) exceeds user maximum (4 mo)",
+        "installment_payment_option_15": "duration (24.0 mo) exceeds user maximum (4 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": 5526.82
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=13100.0",
+      "evidence": [],
+      "calculation_trace": "balance=46475.1, min_keep=13100.0, safe_today=0.0, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_06": {
+    "request_id": "request_06",
+    "user_id": "user_06",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "full_payment",
+    "amount_safe_to_pay": 620.4,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (620.40 < 620.40) or pre-salary buffer tight",
+        "installments": "user profile excludes installments",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": 6.7700000000000955
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "full_payment",
+      "binding_constraint": "minimum_balance_to_keep=800.0",
+      "evidence": [],
+      "calculation_trace": "balance=1942.4, min_keep=800.0, safe_today=620.4, earliest_date=2026-01-03 00:00:00",
+      "verified": true
+    }
+  },
+  "request_07": {
+    "request_id": "request_07",
+    "user_id": "user_07",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "installments",
+    "amount_safe_to_pay": 86812.74,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_21": "duration (15.0 mo) exceeds user maximum (12 mo)",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -110587.25
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "installments",
+      "binding_constraint": "minimum_balance_to_keep=93000.0",
+      "evidence": [],
+      "calculation_trace": "balance=218945.56, min_keep=93000.0, safe_today=86812.74, earliest_date=2024-10-23 00:00:00",
+      "verified": true
+    }
+  },
+  "request_08": {
+    "request_id": "request_08",
+    "user_id": "user_08",
+    "affordability_status": "affordable_later",
+    "recommended_payment_method": "wait",
+    "amount_safe_to_pay": 299.25,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (299.25 < 996.60) or pre-salary buffer tight",
+        "installments": "user profile excludes installments",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -697.34
+    },
+    "evidence_graph": {
+      "decision": "affordable_later",
+      "recommended_method": "wait",
+      "binding_constraint": "minimum_balance_to_keep=800.0",
+      "evidence": [],
+      "calculation_trace": "balance=1536.57, min_keep=800.0, safe_today=299.25, earliest_date=2025-04-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_09": {
+    "request_id": "request_09",
+    "user_id": "user_09",
+    "affordability_status": "affordable_now",
+    "recommended_payment_method": "full_payment",
+    "amount_safe_to_pay": 166.61,
+    "audit_trail": {
+      "rejected_reasons": {
+        "installment_payment_option_25": "duration (19.6 mo) exceeds user maximum (2 mo)",
+        "installment_payment_option_26": "duration (24.8 mo) exceeds user maximum (2 mo)",
+        "partial_payment": "safe today (166.61) insufficient or earliest date unavailable"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": 1228.85
+    },
+    "evidence_graph": {
+      "decision": "affordable_now",
+      "recommended_method": "full_payment",
+      "binding_constraint": "minimum_balance_to_keep=600.0",
+      "evidence": [],
+      "calculation_trace": "balance=2231.1, min_keep=600.0, safe_today=166.61, earliest_date=2026-07-04 00:00:00",
+      "verified": true
+    }
+  },
+  "request_10": {
+    "request_id": "request_10",
+    "user_id": "user_10",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 82279.75,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_28": "duration (15.0 mo) exceeds user maximum (6 mo)",
+        "partial_payment": "safe today (82279.75) insufficient or earliest date unavailable"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": 71871.38
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=225400.0",
+      "evidence": [],
+      "calculation_trace": "balance=750155.0, min_keep=225400.0, safe_today=82279.75, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_11": {
+    "request_id": "request_11",
+    "user_id": "user_11",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "full_payment",
+    "amount_safe_to_pay": 12350881.32,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (12350881.32 < 13110000.00) or pre-salary buffer tight",
+        "wait": "earliest full date (2025-06-15) misses desired completion deadline (2025-06-12)",
+        "installments": "user profile excludes installments",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 2,
+      "wait_completes": false,
+      "pre_sal_margin": -759118.6700000018
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "full_payment",
+      "binding_constraint": "minimum_balance_to_keep=34140600.0",
+      "evidence": [],
+      "calculation_trace": "balance=63531795.0, min_keep=34140600.0, safe_today=12350881.32, earliest_date=2025-06-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_12": {
+    "request_id": "request_12",
+    "user_id": "user_12",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "installments",
+    "amount_safe_to_pay": 57321.79,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_35": "duration (19.6 mo) exceeds user maximum (11 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": false,
+      "pre_sal_margin": 55114.75
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "installments",
+      "binding_constraint": "minimum_balance_to_keep=43200.0",
+      "evidence": [],
+      "calculation_trace": "balance=193089.89, min_keep=43200.0, safe_today=57321.79, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_13": {
+    "request_id": "request_13",
+    "user_id": "user_13",
+    "affordability_status": "affordable_later",
+    "recommended_payment_method": "wait",
+    "amount_safe_to_pay": 866.42,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (866.42 < 941.60) or pre-salary buffer tight",
+        "installments": "user profile excludes installments",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 2,
+      "wait_completes": true,
+      "pre_sal_margin": 263.7800000000001
+    },
+    "evidence_graph": {
+      "decision": "affordable_later",
+      "recommended_method": "wait",
+      "binding_constraint": "minimum_balance_to_keep=1300.0",
+      "evidence": [
+        "event:event_1161"
+      ],
+      "calculation_trace": "balance=2789.52, min_keep=1300.0, safe_today=866.42, earliest_date=2024-05-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_14": {
+    "request_id": "request_14",
+    "user_id": "user_14",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 617.43,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installments": "user profile excludes installments",
+        "partial_payment": "safe today (617.43) insufficient or earliest date unavailable"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": -4796.76
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=2200.0",
+      "evidence": [],
+      "calculation_trace": "balance=3931.74, min_keep=2200.0, safe_today=617.43, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_15": {
+    "request_id": "request_15",
+    "user_id": "user_15",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 9.23,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installments": "user profile excludes installments",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": -3675.76
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=1200.0",
+      "evidence": [],
+      "calculation_trace": "balance=1770.05, min_keep=1200.0, safe_today=9.23, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_16": {
+    "request_id": "request_16",
+    "user_id": "user_16",
+    "affordability_status": "affordable_now",
+    "recommended_payment_method": "full_payment",
+    "amount_safe_to_pay": 122500.0,
+    "audit_trail": {
+      "rejected_reasons": {
+        "installment_payment_option_45": "duration (15.0 mo) exceeds user maximum (2 mo)",
+        "installment_payment_option_46": "duration (6.2 mo) exceeds user maximum (2 mo)",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": 117470.0
+    },
+    "evidence_graph": {
+      "decision": "affordable_now",
+      "recommended_method": "full_payment",
+      "binding_constraint": "minimum_balance_to_keep=122400.0",
+      "evidence": [
+        "event:event_1442"
+      ],
+      "calculation_trace": "balance=362370.0, min_keep=122400.0, safe_today=122500.0, earliest_date=2023-08-12 00:00:00",
+      "verified": true
+    }
+  },
+  "request_17": {
+    "request_id": "request_17",
+    "user_id": "user_17",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "installments",
+    "amount_safe_to_pay": 241621.0,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_49": "duration (18.6 mo) exceeds user maximum (3 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -32978.98999999999
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "installments",
+      "binding_constraint": "minimum_balance_to_keep=166100.0",
+      "evidence": [
+        "event:event_1546"
+      ],
+      "calculation_trace": "balance=550379.58, min_keep=166100.0, safe_today=241621.0, earliest_date=2026-04-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_18": {
+    "request_id": "request_18",
+    "user_id": "user_18",
+    "affordability_status": "affordable_later",
+    "recommended_payment_method": "wait",
+    "amount_safe_to_pay": 559.95,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (559.95 < 3246.10) or pre-salary buffer tight",
+        "installments": "user profile excludes installments",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -2686.14
+    },
+    "evidence_graph": {
+      "decision": "affordable_later",
+      "recommended_method": "wait",
+      "binding_constraint": "minimum_balance_to_keep=1400.0",
+      "evidence": [],
+      "calculation_trace": "balance=2486.0, min_keep=1400.0, safe_today=559.95, earliest_date=2026-09-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_19": {
+    "request_id": "request_19",
+    "user_id": "user_19",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "partial_payment",
+    "amount_safe_to_pay": 30609.48,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_54": "duration (3.1 mo) exceeds user maximum (2 mo)"
+      },
+      "evaluated_candidates": 2,
+      "wait_completes": true,
+      "pre_sal_margin": -9050.509999999995
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "partial_payment",
+      "binding_constraint": "minimum_balance_to_keep=92800.0",
+      "evidence": [],
+      "calculation_trace": "balance=199545.0, min_keep=92800.0, safe_today=30609.48, earliest_date=2024-09-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_20": {
+    "request_id": "request_20",
+    "user_id": "user_20",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 8340.23,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (8340.23 < 303700.00) or pre-salary buffer tight",
+        "wait": "no date within 90-day forecast horizon where full payment is safe",
+        "installment_payment_option_56": "duration (18.6 mo) exceeds user maximum (11 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": -295359.76
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=64500.0",
+      "evidence": [
+        "event:event_1786",
+        "event:event_1787"
+      ],
+      "calculation_trace": "balance=102609.05, min_keep=64500.0, safe_today=8340.23, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_21": {
+    "request_id": "request_21",
+    "user_id": "user_21",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "full_payment",
+    "amount_safe_to_pay": 1574.4,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (1574.40 < 1574.40) or pre-salary buffer tight",
+        "installments": "user profile excludes installments",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": 99.30999999999995
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "full_payment",
+      "binding_constraint": "minimum_balance_to_keep=1800.0",
+      "evidence": [
+        "event:event_1857",
+        "event:event_1858"
+      ],
+      "calculation_trace": "balance=3911.35, min_keep=1800.0, safe_today=1574.4, earliest_date=2026-04-03 00:00:00",
+      "verified": true
+    }
+  },
+  "request_22": {
+    "request_id": "request_22",
+    "user_id": "user_22",
+    "affordability_status": "affordable_with_plan",
+    "recommended_payment_method": "installments",
+    "amount_safe_to_pay": 481.25,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installment_payment_option_63": "duration (15.0 mo) exceeds user maximum (6 mo)",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -250.24
+    },
+    "evidence_graph": {
+      "decision": "affordable_with_plan",
+      "recommended_method": "installments",
+      "binding_constraint": "minimum_balance_to_keep=500.0",
+      "evidence": [
+        "event:event_1961"
+      ],
+      "calculation_trace": "balance=1132.46, min_keep=500.0, safe_today=481.25, earliest_date=2025-01-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_23": {
+    "request_id": "request_23",
+    "user_id": "user_23",
+    "affordability_status": "affordable_later",
+    "recommended_payment_method": "wait",
+    "amount_safe_to_pay": 8724.22,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (8724.22 < 38016.00) or pre-salary buffer tight",
+        "installment_payment_option_65": "duration (18.6 mo) exceeds user maximum (12 mo)",
+        "installment_payment_option_66": "duration (24.0 mo) exceeds user maximum (12 mo)",
+        "partial_payment": "request does not allow partial payment"
+      },
+      "evaluated_candidates": 1,
+      "wait_completes": true,
+      "pre_sal_margin": -29291.769999999997
+    },
+    "evidence_graph": {
+      "decision": "affordable_later",
+      "recommended_method": "wait",
+      "binding_constraint": "minimum_balance_to_keep=27000.0",
+      "evidence": [
+        "event:event_2042"
+      ],
+      "calculation_trace": "balance=51957.9, min_keep=27000.0, safe_today=8724.22, earliest_date=2025-07-15 00:00:00",
+      "verified": true
+    }
+  },
+  "request_24": {
+    "request_id": "request_24",
+    "user_id": "user_24",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 13366.7,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment": "user profile excludes full payment method",
+        "wait": "user does not consider full payment",
+        "installments": "user profile excludes installments",
+        "partial_payment": "safe today (13366.70) insufficient or earliest date unavailable"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": -96233.29000000001
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=51000.0",
+      "evidence": [
+        "event:event_2166"
+      ],
+      "calculation_trace": "balance=85045.0, min_keep=51000.0, safe_today=13366.7, earliest_date=None",
+      "verified": true
+    }
+  },
+  "request_25": {
+    "request_id": "request_25",
+    "user_id": "user_25",
+    "affordability_status": "not_affordable",
+    "recommended_payment_method": "not_recommended",
+    "amount_safe_to_pay": 2452912.22,
+    "audit_trail": {
+      "rejected_reasons": {
+        "full_payment_immediate": "insufficient safe headroom (2452912.22 < 60496000.00) or pre-salary buffer tight",
+        "wait": "no date within 90-day forecast horizon where full payment is safe",
+        "installment_payment_option_70": "duration (15.0 mo) exceeds user maximum (3 mo)",
+        "installment_payment_option_71": "duration (22.4 mo) exceeds user maximum (3 mo)",
+        "partial_payment": "user profile excludes partial payment"
+      },
+      "evaluated_candidates": 0,
+      "wait_completes": false,
+      "pre_sal_margin": -58043087.769999996
+    },
+    "evidence_graph": {
+      "decision": "not_affordable",
+      "recommended_method": "not_recommended",
+      "binding_constraint": "minimum_balance_to_keep=23379100.0",
+      "evidence": [
+        "event:event_2288"
+      ],
+      "calculation_trace": "balance=32063050.0, min_keep=23379100.0, safe_today=2452912.22, earliest_date=None",
+      "verified": true
+    }
+  }
+}

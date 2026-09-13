@@ -13,7 +13,7 @@ from main import load_image_facts, load_message_facts
 ds = DataStore()
 samples = ds.sample_requests
 
-def build_forecast_v3(entries, message_facts, profile, request_date, horizon_days=90):
+def build_forecast_v6(entries, message_facts, profile, request_date, horizon_days=90):
     end_date = request_date + pd.Timedelta(days=horizon_days)
     forecast = []
 
@@ -138,16 +138,20 @@ def build_forecast_v3(entries, message_facts, profile, request_date, horizon_day
         if mf.fact_type == "salary_seasonal_end" and mf.confidence >= 0.7:
             forecast = [fe for fe in forecast if not (fe.is_projected and fe.category == "salary")]
         elif mf.fact_type == "salary_change" and mf.confidence >= 0.7 and mf.new_amount:
-            eff = pd.Timestamp(mf.effective_date) if mf.effective_date else request_date
-            for fe in forecast:
-                if fe.category == "salary" and fe.direction == "credit" and fe.date >= eff:
-                    fe.amount = mf.new_amount
+            if commission_unconfirmed and not mf.effective_date:
+                # When commission/payroll is unconfirmed with no effective date, base continues
+                pass
+            else:
+                eff = pd.Timestamp(mf.effective_date) if mf.effective_date else request_date
+                for fe in forecast:
+                    if fe.category == "salary" and fe.direction == "credit" and fe.date >= eff:
+                        fe.amount = mf.new_amount
 
     forecast = [fe for fe in forecast if request_date <= fe.date <= end_date]
     forecast.sort(key=lambda fe: fe.date)
     return forecast
 
-def try_spending_changes_v4(entries, profile, request_date, forecast, requested_amount, desired_completion_date, start_balance, minimum_balance, message_facts, max_changes=3):
+def try_spending_changes_v7(entries, profile, request_date, forecast, requested_amount, desired_completion_date, start_balance, minimum_balance, message_facts, max_changes=3):
     flexible = _get_flexible_events(entries, profile, request_date)
     if not flexible:
         return [], forecast, compute_amount_safe_to_pay(start_balance, minimum_balance, requested_amount, request_date, forecast)
@@ -159,29 +163,49 @@ def try_spending_changes_v4(entries, profile, request_date, forecast, requested_
     reduce_map = {}
     applied_changes = []
 
-    def _is_target_met(ex_ids, red_map):
-        return is_safe(start_balance, minimum_balance, request_date, forecast, request_date, requested_amount, None, ex_ids, red_map)
-
     def _get_min_bal(ex_ids, red_map):
-        tl = compute_running_balance(start_balance, request_date, forecast, exclude_event_ids=ex_ids, reduce_amounts=red_map)
+        tl = compute_running_balance(start_balance, request_date, forecast, extra_payments=[(request_date, requested_amount)], exclude_event_ids=ex_ids, reduce_amounts=red_map)
         return min(b for _, b in tl) if tl else start_balance
+
+    # Target is safe margin (at least 150 buffer above minimum balance)
+    def _is_safe_with_buffer(ex_ids, red_map):
+        return _get_min_bal(ex_ids, red_map) >= minimum_balance + max(120.0, 0.08 * requested_amount)
 
     current_min_bal = _get_min_bal(exclude_ids, reduce_map)
 
+    # First, test if any SINGLE change achieves safety (minimal disruption)
+    for e in flexible:
+        # Try single reduce
+        if e.flexibility in ("reducible", "reducible_or_stoppable") and e.category in willing_to_reduce:
+            min_allowed = e.minimum_allowed_amount if e.minimum_allowed_amount is not None else round(e.amount * 0.5, 2)
+            if min_allowed < e.amount:
+                if _is_safe_with_buffer(exclude_ids, {e.event_id: min_allowed}):
+                    applied_changes.append(SpendingChange("reduce_to", e.event_id, min_allowed))
+                    final_safe = compute_amount_safe_to_pay(start_balance, minimum_balance, requested_amount, request_date, forecast, exclude_ids, {e.event_id: min_allowed})
+                    return applied_changes, forecast, final_safe
+
+        # Try single stop
+        if e.flexibility in ("stoppable", "reducible_or_stoppable") and e.category in willing_to_stop:
+            if _is_safe_with_buffer({e.event_id}, reduce_map):
+                applied_changes.append(SpendingChange("stop", e.event_id))
+                final_safe = compute_amount_safe_to_pay(start_balance, minimum_balance, requested_amount, request_date, forecast, {e.event_id}, reduce_map)
+                return applied_changes, forecast, final_safe
+
+    # If no single change works, combine changes (prefer subscriptions to stop, reducible_or_stoppable to reduce)
     for e in flexible:
         if len(applied_changes) >= max_changes: break
         if e.event_id in exclude_ids or e.event_id in reduce_map: continue
-        if _is_target_met(exclude_ids, reduce_map) and len(applied_changes) > 0: break
+        if _is_safe_with_buffer(exclude_ids, reduce_map): break
 
-        # Try stop
-        if e.flexibility in ("stoppable", "reducible_or_stoppable") and e.category in willing_to_stop:
+        # Try stop for purely stoppable subscriptions
+        if e.flexibility == "stoppable" and e.category in willing_to_stop:
             trial_exclude = exclude_ids | {e.event_id}
             new_min_bal = _get_min_bal(trial_exclude, reduce_map)
             if new_min_bal > current_min_bal:
                 exclude_ids.add(e.event_id)
                 current_min_bal = new_min_bal
                 applied_changes.append(SpendingChange("stop", e.event_id))
-                if _is_target_met(exclude_ids, reduce_map): break
+                if _is_safe_with_buffer(exclude_ids, reduce_map): break
                 continue
 
         # Try reduce
@@ -194,12 +218,12 @@ def try_spending_changes_v4(entries, profile, request_date, forecast, requested_
                     reduce_map[e.event_id] = min_allowed
                     current_min_bal = new_min_bal
                     applied_changes.append(SpendingChange("reduce_to", e.event_id, min_allowed))
-                    if _is_target_met(exclude_ids, reduce_map): break
+                    if _is_safe_with_buffer(exclude_ids, reduce_map): break
 
     final_safe = compute_amount_safe_to_pay(start_balance, minimum_balance, requested_amount, request_date, forecast, exclude_ids, reduce_map)
     return applied_changes, forecast, final_safe
 
-def select_best_plan_v3(request, profile, entries, forecast, message_facts, ds):
+def select_best_plan_v6(request, profile, entries, forecast, message_facts, ds):
     user_id = request["user_id"]
     request_id = request["request_id"]
     request_date = request["request_date"]
@@ -219,64 +243,62 @@ def select_best_plan_v3(request, profile, entries, forecast, message_facts, ds):
     amount_safe = compute_amount_safe_to_pay(start_balance, minimum_balance, requested_amount, request_date, forecast)
     earliest_full_date = find_earliest_full_payment_date(start_balance, minimum_balance, requested_amount, request_date, forecast, 90, desired_completion_date)
 
-    # Pre-salary margin
+    # Compute pre-salary margin
     sal_dates = [fe.date for fe in forecast if fe.category == "salary" and fe.direction == "credit"]
     next_sal_date = min(sal_dates) if sal_dates else request_date + pd.Timedelta(days=30)
     tl = compute_running_balance(start_balance, request_date, forecast)
     pre_sal_tl = [b for d, b in tl if d < next_sal_date]
     pre_sal_min = min(pre_sal_tl) if pre_sal_tl else start_balance
     pre_sal_margin = (pre_sal_min - minimum_balance) - requested_amount
-
     is_tight = (pre_sal_margin < max(120.0, 0.08 * requested_amount)) or (amount_safe < requested_amount)
 
     candidates = []
 
-    # If tight & user has flexible preferences & full_payment is allowed: try spending changes
-    spending_changes_plan = None
-    if has_flexible_prefs and is_tight and "full_payment" in payment_methods:
-        changes, mod_fc, safe_with = try_spending_changes_v4(
-            entries, profile, request_date, forecast, requested_amount,
-            desired_completion_date, start_balance, minimum_balance, message_facts
-        )
-        if changes:
-            ex_ids = {c.event_id for c in changes if c.change_type == "stop"}
-            red_map = {c.event_id: c.new_amount for c in changes if c.change_type == "reduce_to"}
-            if is_safe(start_balance, minimum_balance, request_date, forecast, request_date, requested_amount, None, ex_ids, red_map):
+    # 1. Candidate 1: full payment
+    if "full_payment" in payment_methods:
+        # If paying today has tight margin or unsafe:
+        if has_flexible_prefs and is_tight:
+            changes, mod_fc, safe_with = try_spending_changes_v7(
+                entries, profile, request_date, forecast, requested_amount,
+                desired_completion_date, start_balance, minimum_balance, message_facts
+            )
+            if changes:
+                ex_ids = {c.event_id for c in changes if c.change_type == "stop"}
+                red_map = {c.event_id: c.new_amount for c in changes if c.change_type == "reduce_to"}
+                if is_safe(start_balance, minimum_balance, request_date, forecast, request_date, requested_amount, None, ex_ids, red_map):
+                    plan_str = _build_payment_plan_str([(request_date, requested_amount)])
+                    candidates.append(PaymentPlan(
+                        affordability_status="affordable_with_plan",
+                        recommended_payment_method="full_payment",
+                        payment_plan_str=plan_str,
+                        earliest_date_for_full_payment=earliest_full_date,
+                        spending_changes=changes,
+                        amount_safe_to_pay=amount_safe,
+                        total_paid=requested_amount,
+                        num_payments=1,
+                        first_payment_date=request_date,
+                        payment_option_id=None,
+                        completes_by_deadline=True,
+                    ))
+
+        if amount_safe >= requested_amount and not is_tight:
+            if is_safe(start_balance, minimum_balance, request_date, forecast, request_date, requested_amount):
                 plan_str = _build_payment_plan_str([(request_date, requested_amount)])
-                spending_changes_plan = PaymentPlan(
-                    affordability_status="affordable_with_plan",
+                candidates.append(PaymentPlan(
+                    affordability_status="affordable_now",
                     recommended_payment_method="full_payment",
                     payment_plan_str=plan_str,
-                    earliest_date_for_full_payment=earliest_full_date,
-                    spending_changes=changes,
-                    amount_safe_to_pay=amount_safe,
+                    earliest_date_for_full_payment=request_date,
+                    spending_changes=[],
+                    amount_safe_to_pay=requested_amount,
                     total_paid=requested_amount,
                     num_payments=1,
                     first_payment_date=request_date,
                     payment_option_id=None,
                     completes_by_deadline=True,
-                )
+                ))
 
-    if spending_changes_plan is not None:
-        candidates.append(spending_changes_plan)
-    elif "full_payment" in payment_methods and amount_safe >= requested_amount:
-        if is_safe(start_balance, minimum_balance, request_date, forecast, request_date, requested_amount):
-            plan_str = _build_payment_plan_str([(request_date, requested_amount)])
-            candidates.append(PaymentPlan(
-                affordability_status="affordable_now",
-                recommended_payment_method="full_payment",
-                payment_plan_str=plan_str,
-                earliest_date_for_full_payment=request_date,
-                spending_changes=[],
-                amount_safe_to_pay=requested_amount,
-                total_paid=requested_amount,
-                num_payments=1,
-                first_payment_date=request_date,
-                payment_option_id=None,
-                completes_by_deadline=True,
-            ))
-
-    # Candidate 2: wait
+    # 2. Candidate 2: wait for full_payment
     if "full_payment" in payment_methods and earliest_full_date is not None:
         if earliest_full_date > request_date:
             completes_by = earliest_full_date <= desired_completion_date
@@ -295,7 +317,7 @@ def select_best_plan_v3(request, profile, entries, forecast, message_facts, ds):
                 completes_by_deadline=completes_by,
             ))
 
-    # Candidate 3: installments
+    # 3. Candidate 3: installments
     if "installments" in payment_methods:
         options = ds.get_request_options(request_id)
         for _, opt in options[options["payment_method"] == "installments"].iterrows():
@@ -324,7 +346,7 @@ def select_best_plan_v3(request, profile, entries, forecast, message_facts, ds):
                     completes_by_deadline=(max(d for d, _ in schedule) <= desired_completion_date),
                 ))
 
-    # Candidate 4: partial payment
+    # 4. Candidate 4: partial payment
     if "partial_payment" in payment_methods and allows_partial:
         if 0 < amount_safe < requested_amount and earliest_full_date is not None:
             if earliest_full_date <= desired_completion_date:
@@ -346,16 +368,32 @@ def select_best_plan_v3(request, profile, entries, forecast, message_facts, ds):
                     ))
 
     def _rank_key(p: PaymentPlan):
-        method_order = {"full_payment": 0, "installments": 1, "partial_payment": 2, "wait": 3, "not_recommended": 4}
-        m_rank = method_order.get(p.recommended_payment_method, 5)
         completes = 0 if p.completes_by_deadline else 1
+        # Method priority:
+        # If a plan requires spending changes, user only prefers it if waiting misses deadline!
+        # If waiting completes by deadline without spending changes, waiting is preferred over lifestyle cuts.
+        wait_completes = (earliest_full_date is not None and earliest_full_date <= desired_completion_date)
+
+        if p.recommended_payment_method == "full_payment" and not p.spending_changes:
+            rank = 0
+        elif p.recommended_payment_method in ("installments", "partial_payment"):
+            rank = 1
+        elif p.recommended_payment_method == "wait" and wait_completes:
+            rank = 2  # Wait without changes beats cutting spending if wait meets deadline
+        elif p.recommended_payment_method == "full_payment" and p.spending_changes:
+            rank = 3 if wait_completes else 0.5  # If wait doesn't meet deadline, spending changes take top priority!
+        elif p.recommended_payment_method == "wait":
+            rank = 4
+        else:
+            rank = 5
+
         has_changes = 0 if not p.spending_changes else 1
         total = p.total_paid
         first = p.first_payment_date or pd.Timestamp("2099-01-01")
         n_payments = p.num_payments
         opt_id = p.payment_option_id or "zzz"
         opt_num = int("".join(filter(str.isdigit, opt_id))) if opt_id != "zzz" else 9999
-        return (completes, m_rank, has_changes, total, first, n_payments, opt_num)
+        return (completes, rank, has_changes, total, first, n_payments, opt_num)
 
     safe_by_deadline = [c for c in candidates if c.completes_by_deadline]
     if safe_by_deadline:
@@ -380,7 +418,7 @@ def select_best_plan_v3(request, profile, entries, forecast, message_facts, ds):
         completes_by_deadline=False,
     )
 
-print("Running benchmark on all 25 sample requests...")
+print("Testing all 25 sample requests with v6 engine...")
 st_correct = 0
 meth_correct = 0
 for idx, req in samples.iterrows():
@@ -390,8 +428,8 @@ for idx, req in samples.iterrows():
     img_facts = load_image_facts(ds, req_id, user_id)
     msg_facts = load_message_facts(ds, user_id, req_id)
     entries, _ = reconcile_user_events(user_id, ds, img_facts, msg_facts, req["request_date"])
-    fc = build_forecast_v3(entries, msg_facts, profile, req["request_date"])
-    plan = select_best_plan_v3(req, profile, entries, fc, msg_facts, ds)
+    fc = build_forecast_v6(entries, msg_facts, profile, req["request_date"])
+    plan = select_best_plan_v6(req, profile, entries, fc, msg_facts, ds)
 
     st_ok = plan.affordability_status == req["affordability_status"]
     me_ok = plan.recommended_payment_method == req["recommended_payment_method"]

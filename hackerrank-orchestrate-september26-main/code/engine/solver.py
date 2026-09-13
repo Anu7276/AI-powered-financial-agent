@@ -137,15 +137,17 @@ def find_earliest_full_payment_date(
         if is_safe(start_balance, minimum_balance, request_date, forecast,
                    candidate_date, requested_amount):
             return candidate_date
-        # If candidate_date completes by desired_completion_date, also check if safe up to desired_completion_date
-        if desired_completion_date is not None and candidate_date <= desired_completion_date:
-            timeline = compute_running_balance(
-                start_balance, request_date, forecast,
-                extra_payments=[(candidate_date, requested_amount)]
-            )
-            sub = [b for d, b in timeline if d <= desired_completion_date]
-            if sub and min(sub) >= minimum_balance:
-                return candidate_date
+        # If candidate_date is an income credit date and matches desired_completion_date, verify safety up to that date
+        if desired_completion_date is not None and candidate_date == desired_completion_date:
+            has_credit = any(f.date == candidate_date and f.direction == "credit" for f in forecast)
+            if has_credit:
+                timeline = compute_running_balance(
+                    start_balance, request_date, forecast,
+                    extra_payments=[(candidate_date, requested_amount)]
+                )
+                sub = [b for d, b in timeline if d <= desired_completion_date]
+                if sub and min(sub) >= minimum_balance:
+                    return candidate_date
     return None
 
 

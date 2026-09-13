@@ -125,32 +125,54 @@ def build_forecast(
     # ── Part 2: detect recurrence from historical settled events ──────────────
     historical = [e for e in entries if e.date <= request_date and e.status == "settled"]
 
-    # Group by (category, direction, flexibility)
+    # Check for unconfirmed commission/bonus in messages
+    commission_unconfirmed = any(
+        mf.fact_type == "bonus_pending" or
+        any(w in (getattr(mf, "raw_note", "") or "").lower() for w in ["komisi belum", "commission unconfirmed", "commission not approved", "belum disetujui"])
+        for mf in message_facts
+    )
+
+    # Multi-feature recurrence grouping:
+    # Group by (category, direction, flexibility, stream)
+    # where stream separates base salary from commissions/bonuses
     by_cat: dict[tuple, list[LedgerEntry]] = defaultdict(list)
     for e in historical:
-        by_cat[(e.category, e.direction, e.flexibility)].append(e)
+        cat = e.category
+        desc = (getattr(e, "description", "") or "").lower()
+        stream = ""
+        if cat == "salary":
+            if any(w in desc for w in ["commission", "komisi", "bonus"]):
+                stream = "commission"
+            else:
+                stream = "base"
+        by_cat[(cat, e.direction, e.flexibility, stream)].append(e)
 
     # Find scheduled salary to use as anchor for salary projection
     scheduled_salaries = [e for e in entries if e.category == "salary"
                           and e.direction == "credit" and e.status == "scheduled"]
 
-    for (cat, direction, flex), group in by_cat.items():
-        if cat in ONE_OFF_CATEGORIES:
+    for (cat, direction, flex, stream), group in by_cat.items():
+        # Only skip true one-offs if they don't have explicit flexibility declarations
+        if cat in ONE_OFF_CATEGORIES and flex not in ("reducible", "stoppable", "reducible_or_stoppable"):
             continue
         if len(group) < MIN_OCCURRENCES_RECURRING:
+            continue
+        # If commission is explicitly unconfirmed, do not project speculative commission
+        if cat == "salary" and stream == "commission" and commission_unconfirmed:
             continue
 
         sorted_group = sorted(group, key=lambda e: e.date)
         dates = [e.date for e in sorted_group]
         cadence = _detect_cadence(dates)
 
-        # Amount estimation
+        # Multi-feature amount estimation:
+        # For variable categories (utilities, transport, groceries), use median of recent occurrences
+        # For variable categories (utilities, groceries, transport, dining), use recent median
         amounts = [e.amount for e in sorted_group]
-        if cat in VARIABLE_RECURRING:
+        if cat in VARIABLE_RECURRING or cat == "dining":
             recent = amounts[-6:] if len(amounts) >= 6 else amounts
             proj_amount = float(np.median(recent))
         else:
-            # Fixed recurring: use most recent amount
             proj_amount = sorted_group[-1].amount
 
         last_flex = sorted_group[-1].flexibility
@@ -159,11 +181,9 @@ def build_forecast(
 
         # For salary, use the scheduled next salary amount if available
         if cat == "salary" and direction == "credit":
-            if scheduled_salaries:
-                # Use the confirmed next salary as anchor
+            if scheduled_salaries and stream != "commission":
                 next_sal = sorted(scheduled_salaries, key=lambda x: x.date)[0]
                 proj_amount = next_sal.amount
-                # Project from the scheduled salary forward
                 last_date = next_sal.date
                 step = 1
                 while True:
@@ -182,13 +202,13 @@ def build_forecast(
                         event_type="income",
                     ))
                     step += 1
-                continue  # Skip default projection loop below
+                continue
             else:
-                # No confirmed future salary; check if last historical was a final payroll
                 last_desc = (getattr(sorted_group[-1], "description", "") or "").lower()
                 if any(w in last_desc for w in ["final", "severance", "terminated", "ended"]):
-                    continue  # Employment ended, no future salary to project
-                proj_amount = sorted_group[-1].amount
+                    continue
+                # Monthly salary cadence
+                cadence = 30
 
         # Default: project from last occurrence
         last_date = sorted_group[-1].date
@@ -225,7 +245,7 @@ def build_forecast(
     # ── Part 3: handle users with ONE salary in history + one scheduled ────────
     # (new employees). If salary has only 1 historical occurrence (or none), we
     # still project from the scheduled next salary.
-    sal_key = ("salary", "credit", "fixed")
+    sal_key = ("salary", "credit", "fixed", "base")
     sal_hist_count = len(by_cat.get(sal_key, []))
     if sal_hist_count < MIN_OCCURRENCES_RECURRING and scheduled_salaries:
         # No historical salary to detect recurrence from; project from scheduled
@@ -259,7 +279,9 @@ def build_forecast(
         if mf.fact_type == "salary_seasonal_end" and mf.confidence >= 0.7:
             salary_seasonal_end = True
         elif mf.fact_type == "salary_change" and mf.confidence >= 0.7:
-            if mf.new_amount is not None:
+            if commission_unconfirmed and not mf.effective_date:
+                pass
+            elif mf.new_amount is not None:
                 new_date = pd.Timestamp(mf.effective_date) if mf.effective_date else request_date
                 if salary_change_amount is None or (
                     salary_change_date and new_date > salary_change_date

@@ -276,35 +276,40 @@ def _parse_message_deterministic(row, user_id: str) -> MessageFact:
     if any(w in lower for w in ["seasonal contract has ended", "kontrak musiman", "no off-season income", "akhir kontrak"]):
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type="salary_seasonal_end",
-            category="salary", new_amount=None, effective_date=None, event_id_referenced=ev_ref, confidence=confidence
+            category="salary", new_amount=None, effective_date=None, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     # 2. Bonus pending
     if "bonus" in lower and any(w in lower for w in ["pending", "menunggu", "unconfirmed", "belum"]):
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type="bonus_pending",
-            category="salary", new_amount=None, effective_date=None, event_id_referenced=ev_ref, confidence=confidence
+            category="salary", new_amount=None, effective_date=None, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     # 3. Pending gig / payouts (QuickCrew, RideGrid, TaskSprint, InvoiceFlow)
     if any(w in lower for w in ["payout is still pending", "masih tertunda", "faktur sebesar", "tertunda"]):
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type="payment_delayed",
-            category=None, new_amount=None, effective_date=None, event_id_referenced=ev_ref, confidence=confidence
+            category=None, new_amount=None, effective_date=None, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     # 4. Pending refund
     if "refund" in lower or "pengembalian dana" in lower:
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type="payment_delayed",
-            category="refund", new_amount=None, effective_date=None, event_id_referenced=ev_ref, confidence=confidence
+            category="refund", new_amount=None, effective_date=None, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     # 5. Internal account transfer
     if any(w in lower for w in ["transfer between your accounts", "transfer antar-rekening", "transfer antar rekening"]):
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type="payment_confirmed",
-            category=None, new_amount=None, effective_date=None, event_id_referenced=ev_ref, confidence=confidence
+            category=None, new_amount=None, effective_date=None, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     # 6. Rent change
@@ -319,7 +324,8 @@ def _parse_message_deterministic(row, user_id: str) -> MessageFact:
             effective_date = m_date.group(1)
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type=fact_type,
-            category=category, new_amount=new_amount, effective_date=effective_date, event_id_referenced=ev_ref, confidence=confidence
+            category=category, new_amount=new_amount, effective_date=effective_date, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     # 7. Salary change / salary date change
@@ -341,12 +347,14 @@ def _parse_message_deterministic(row, user_id: str) -> MessageFact:
 
         return MessageFact(
             message_id=mid, user_id=user_id, fact_type=fact_type,
-            category=category, new_amount=new_amount, effective_date=effective_date, event_id_referenced=ev_ref, confidence=confidence
+            category=category, new_amount=new_amount, effective_date=effective_date, event_id_referenced=ev_ref,
+            confidence=confidence, raw_note=text
         )
 
     return MessageFact(
         message_id=mid, user_id=user_id, fact_type=fact_type,
-        category=category, new_amount=new_amount, effective_date=effective_date, event_id_referenced=ev_ref, confidence=confidence
+        category=category, new_amount=new_amount, effective_date=effective_date, event_id_referenced=ev_ref,
+        confidence=confidence, raw_note=text
     )
 
 
