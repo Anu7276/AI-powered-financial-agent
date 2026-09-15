@@ -15,7 +15,7 @@
 
 ---
 
-## 1. Problem
+# 1. Problem
 
 When a user asks **"Can I afford this laptop?"**, checking only their current available bank balance is dangerous and financially irresponsible. A real-world financial decision must account for:
 
