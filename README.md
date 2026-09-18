@@ -1,7 +1,6 @@
 # AI-Assisted, Evidence-Grounded Deterministic Financial Decision Engine
 
 <div align="center">
-
 [![Affordability Status](https://img.shields.io/badge/Affordability%20Status%20Accuracy-100%25%20(25%2F25)-brightgreen?style=for-the-badge&logo=checkmarx)](https://github.com/)
 [![Payment Method](https://img.shields.io/badge/Payment%20Method%20Accuracy-100%25%20(25%2F25)-brightgreen?style=for-the-badge&logo=checkmarx)](https://github.com/)
 [![Median Relative Error](https://img.shields.io/badge/Median%20Relative%20Error-4.67%25-blue?style=for-the-badge)](https://github.com/)
